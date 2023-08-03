@@ -3,6 +3,7 @@ import Intro from './components/Intro/Intro';
 import React from 'react';
 import Main from './components/Main/Main';
 import Navbar from './components/Navbar/Navbar';
+import Projects from './components/Projects/Projects';
 import { gsap } from 'gsap';
 
 const bounceElement = () => {
@@ -16,7 +17,7 @@ function App() {
     <main className="app">
       <Navbar />
       <Intro bounceElement={bounceElement}/>
-      <Main />
+      <Projects />
     </main>
   );
 }
