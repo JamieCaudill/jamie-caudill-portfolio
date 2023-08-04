@@ -1,9 +1,10 @@
 import './App.css';
 import Intro from './components/Intro/Intro';
 import React from 'react';
-import Main from './components/Main/Main';
+
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/Projects';
+import ProjectDetails from './components/ProjectDetails/ProjectDetails';
 import { gsap } from 'gsap';
 
 const bounceElement = () => {

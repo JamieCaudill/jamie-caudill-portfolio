@@ -1,10 +1,8 @@
 // Navbar.js
 
 import './Navbar.css';
-import Main from "../Main/Main"
-import Intro from "../Intro/Intro"
-import { Element, Link } from "react-scroll"
 
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   return (
@@ -18,7 +16,7 @@ export default function Navbar() {
             <Link to="intro" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
           </li>
           <li className="navbar__item">
-            <Link to="main" spy={true} smooth={true} offset={50} duration={500}>Main</Link>
+            <Link to="projects" spy={true} smooth={true} offset={50} duration={500}>Projects</Link>
           </li>
         </ul>
       </nav>
