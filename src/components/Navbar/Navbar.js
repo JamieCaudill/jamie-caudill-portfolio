@@ -4,7 +4,7 @@ import './Navbar.css';
 
 import { Link } from 'react-scroll';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar__logo">
@@ -18,8 +18,13 @@ export default function Navbar() {
           <li className="navbar__item">
             <Link to="projects" spy={true} smooth={true} offset={50} duration={500}>Projects</Link>
           </li>
+          <li className="navbar__item">
+            <Link to="resume" spy={true} smooth={true} offset={50} duration={500}>Resume</Link>
+          </li>
         </ul>
       </nav>
     </div>
   )
 }
+
+export default Navbar;

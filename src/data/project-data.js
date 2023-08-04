@@ -4,7 +4,7 @@ const data = [
     "title": "Humor Me",
     "tech": ["React", "Express", "Knex", "PostgreSQL", "React", "CSS", "HTML", "Cypress"],
     "skills": ["Collaboration", "Project Management", "Project Board", "Slack", "Zoom", "UI/UX Design"],
-    "summary": "A full-stack application that allows users to create and save motivational and less-motivational posters using data fetched from an API we created.",
+    "summary": "Humor Me is a web application that encourages users to laugh and feel light through the generation of random quotes. The user has the option to generate quotes in either a wholesome or chaotic category to best fit their mood in the moment. Additional features include allowing the user to favorite quote posters and create their own. This project was completed during Mod 3 of Turing School of Software and Design. The goal of this project was to learn and implement a new technology. We chose to build a backend server to host our quotes and images, as well as save any user favorited posters. We completed this project over the course of 12 days, including our planning, research and excecution phases. ",
     "github": {
       "frontend": "https://github.com/rachelsoae/humor-me-ui",
       "backend": "https://github.com/rachelsoae/humor-me-be"
@@ -24,17 +24,17 @@ const data = [
     "title": "Zen and the Art of Tacos",
     "tech": ["React", "CSS", "HTML", "Cypress"],
     "skills": ["UI/UX Design", "Accessibility", "Workflow"],
-    "summary": "A front-end application that allows users to generate and favorite random quotes and tacos using data fetched from an API.",
+    "summary": "Zen and the Art of Tacos is a web-based application for anxious taco lovers. Users are able to generate random inspirational and relaxing quotes by clicking on the taco. Quotes are able to be saved and seen on the favorites page. Quotes may also be removed from favorites. This project was the final solo project for MOD 3 of Turing School of Software and Design, wrapping up all that we've learned about React, Cypress, Router, user stories, projects, and UI/UX design.",
     "github": "https://github.com/JamieCaudill/zen-and-tacos",
-    "deployed": "www.example.com",
-    "gif": "www.example.com"
+    "deployed": "https://zen-and-tacos.vercel.app/",
+    "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZTFqODV0MTFucG9nZjVsbm8yczl1eXoxem1keWMxMzh0dTVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/egiGyelUCMxjMaPbHO/giphy.gif"
   },
   {
     "id": "3",
     "title": "Overlook",
     "tech": ["JavaScript", "SCSS", "HTML", "Mocha", "Chai"],
     "skills": ["UI/UX Design", "Network Requests", "Accessibility", "Workflow"],
-    "summary": "A front-end application that allows users to search and book rooms at a hotel using data fetched from an API.",
+    "summary": "Overlook is a web-based hotel-booking application that allows users to login with a username and password. Users will then be taken to a dashboard where they can choose to view their past bookings, their upcoming bookings, the total amount they have spent, or search for new bookings. The search function takes in a date with the option to filter by room type. Once the search results are displayed, the user is able to view room details, and book an available room. Once booked, the room is added to their bookings and the total spent is updated. The users bookings will be available even after page refresh. This project was the final solo project for MOD 2, wrapping up all that we've learned about accessibility, iterators, apis, scope, webpack, and how the internet works.",
     "github": "https://github.com/JamieCaudill/Overlook",
     "deployed": "www.example.com",
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhYmJkZTRjY2IzMTQzNWI5NGFkNjk4ZDQ0NTQyY2Q0YWE1NmYwNyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/FUQ9wpu90OVzACbbb9/giphy.gif"
@@ -44,10 +44,10 @@ const data = [
     "title": "What's Cookin",
     "tech": ["JavaScript", "CSS", "HTML", "Mocha", "Chai"],
     "skills": ["Collaboration", "Project Management", "TDD", "Project Board", "Slack", "Zoom", "UI/UX Design"],
-    "summary": "A front-end application that allows users to search and favorite recipes using data fetched from an API.",
+    "summary": "What's Cookin'? is a group project completed as a part of Module 2 at Turing School of Software Design's Front-End curriculum. The application hosts a variety of recipes that can be viewed as a whole, by course (salads, hor d'oevres, main courses, sides), or searched by a tag or recipe name to show relevent recipes. When looking at a recipe's page that recipe can be saved to the users saved recipes page. When looking at the saved recipe collection the user may search through their recipes and delete recipes of their choosing.",
     "github": "https://github.com/JamieCaudill/whats-cookin-group-project",
     "deployed":"www.example.com",
-    "gif": "https://www.loom.com/share/d4e78185aee34262b0315096767db4a0"
+    "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExemJvNHhleWJscWdvYndyOGtnejl2bHRiN3R0M3d0NTFyb293NmN5MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rv9CrKhOAyLhn70YYh/giphy.gif"
   }
 ]
 
