@@ -14,7 +14,8 @@ const ProjectDetails = ({project, tech}) => {
       <div className="project-details__header">
         <h1>{project.title}</h1>
         <div className="project-details__links">
-          {/* links go here */}
+          <button className="project-details__link" />
+          <button className="project-details__link" />
         </div>
       </div>
       <div className="project-details__container">
