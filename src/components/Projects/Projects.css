@@ -2,7 +2,7 @@
 
 .projects {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   margin: 0;
 }
 
@@ -33,4 +33,8 @@
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
+}
+
+.projects__project-details {
+  height: 100%
 }

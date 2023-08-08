@@ -35,7 +35,9 @@ const Projects = () => {
           <img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" />
         </div>
       </div>
-      {!tech.length || <ProjectDetails project={project} tech={tech}/>}
+      <div className="projects__project-details">
+        {!tech.length || <ProjectDetails project={project} tech={tech}/>}
+      </div>
     </div>
   )
 }
