@@ -1,17 +1,23 @@
 import './App.css';
 import Intro from './components/Intro/Intro';
 import React from 'react';
-import { Element, Link } from 'react-scroll';
-import Main from './components/Main/Main';
-import ScrollNavigation from './components/ScrollNavigation/ScrollNavigation';
+import PdfViewer from './components/PdfViewer/PdfViewer';
+
 import Navbar from './components/Navbar/Navbar';
+import Projects from './components/Projects/Projects';
+import { gsap } from 'gsap';
+
+
+
+gsap.from(".intro__container", {duration: 2.5, y: -500, ease: "power4.out" })
 
 function App() {
   return (
     <main className="app">
       <Navbar />
       <Intro />
-      <Main />
+      <Projects />
+      <PdfViewer />
     </main>
   );
 }
