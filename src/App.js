@@ -1,6 +1,7 @@
 import './App.css';
 import Intro from './components/Intro/Intro';
 import React from 'react';
+import PdfViewer from './components/PdfViewer/PdfViewer';
 
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/Projects';
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Intro />
       <Projects />
+      <PdfViewer />
     </main>
   );
 }
