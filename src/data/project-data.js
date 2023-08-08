@@ -16,7 +16,7 @@ const data = [
       },
       {
         "type": "Deployed Site",
-        "link": "https://humor-me-ui.vercel.app/"
+        "link": "https://humor-me-ui-iota.vercel.app/"
       }
     ],
     "gif": "https://user-images.githubusercontent.com/125763236/257078195-71761667-8d86-4f28-85bb-6da4fac1a7f4.gif"
