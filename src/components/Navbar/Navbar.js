@@ -6,6 +6,10 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
 
+  const openResume = () => {
+    window.open('./Caudill_Resume.pdf', '_blank');
+  };
+
   return (
     <div className="navbar">
       <div className="navbar__container">
@@ -21,7 +25,7 @@ const Navbar = () => {
             <Link to="projects" spy={true} smooth={true} offset={0} duration={500}>Projects</Link>
           </li>
           <li className="navbar__item">
-            <Link to="resume" spy={true} smooth={true} offset={0} duration={500}>Resume</Link>
+            <button onClick={openResume}>Resume</button>
           </li>
         </ul>
       </nav>
