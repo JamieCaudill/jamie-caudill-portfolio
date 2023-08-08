@@ -2,7 +2,7 @@
 
 .projects {
   width: 100vw;
-  height: 120vh;
+  min-height: 120vh;
   margin: 0;
 }
 

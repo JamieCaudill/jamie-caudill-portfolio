@@ -32,7 +32,10 @@ const ProjectDetails = ({project, tech}) => {
           </div>
         </div>
         <div className="project-details__right">
-          <p>{project.summary}</p>
+          <h3 className="project-details__summary-title">Summary</h3>
+          <div className="project-details__summary">
+            <p className="project-details__summary-text">{project.summary}</p>
+          </div>
         </div>
       </div>
     </div>

@@ -24,11 +24,14 @@ const PdfViewer = () => {
   };
 
   return (
+    <div className="resume__outside">
+    <h1 className="resume__title">Resume</h1>
     <div className="resume">
       <Document className='resume__container' file={pdfPath}>
         <Page className='resume__page' pageNumber={1} />
       </Document>
       <button className='resume__btn' onClick={handleDownload}>Download</button>
+    </div>
     </div>
   )
 };
