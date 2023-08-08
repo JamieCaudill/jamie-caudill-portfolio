@@ -2,6 +2,7 @@
 
 import './ProjectDetails.css';
 import data from '../../data/project-data';
+import ProjectLinks from '../ProjectLinks/ProjectLinks';
 
 const ProjectDetails = ({project, tech}) => {
   
@@ -14,8 +15,7 @@ const ProjectDetails = ({project, tech}) => {
       <div className="project-details__header">
         <h1>{project.title}</h1>
         <div className="project-details__links">
-          <button className="project-details__link" />
-          <button className="project-details__link" />
+          <ProjectLinks project={project}/>
         </div>
       </div>
       <div className="project-details__container">
@@ -24,7 +24,6 @@ const ProjectDetails = ({project, tech}) => {
             <img className="project-details__image" src={project.gif} alt="project" />
           </div>
           <div className="project-details__tech">
-            <h3>Technologies</h3>
             <div className="project-details__tech-used">
               <ul>
                 {techUsed}
@@ -33,7 +32,6 @@ const ProjectDetails = ({project, tech}) => {
           </div>
         </div>
         <div className="project-details__right">
-          <h3 className="project-details__summary-title">Summary</h3>
           <div className="project-details__summary">
             <p className="project-details__summary-text">{project.summary}</p>
           </div>

@@ -8,11 +8,11 @@ const data = [
     "links": [
       {
         "type": "FE Repo",
-        "link": "https://github.com/rachelsoae/humor-me-ui",
+        "link": "https://github.com/JamieCaudill/humor-me-ui",
       },
       {
         "type": "BE Repo",
-        "link": "https://github.com/rachelsoae/humor-me-be"
+        "link": "https://github.com/JamieCaudill/humor-me-be"
       },
       {
         "type": "Deployed Site",
@@ -45,8 +45,16 @@ const data = [
     "tech": ["JavaScript", "SCSS", "HTML", "Mocha", "Chai"],
     "skills": ["UI/UX Design", "Network Requests", "Accessibility", "Workflow"],
     "summary": "Overlook is a web-based hotel-booking application that allows users to login with a username and password. Users will then be taken to a dashboard where they can choose to view their past bookings, their upcoming bookings, the total amount they have spent, or search for new bookings. The search function takes in a date with the option to filter by room type. Once the search results are displayed, the user is able to view room details, and book an available room. Once booked, the room is added to their bookings and the total spent is updated. The users bookings will be available even after page refresh. This project was the final solo project for MOD 2, wrapping up all that we've learned about accessibility, iterators, apis, scope, webpack, and how the internet works.",
-    "links": "https://github.com/JamieCaudill/Overlook",
-    "deployed": "https://overlook-bmjqbnbpa-jamiecaudill.vercel.app/",
+    "links": [
+      {
+        "type": "Repo",
+        "link": "https://github.com/JamieCaudill/Overlook"
+      },
+      {
+        "type": "Deployed Site",
+        "link": "https://overlook-bmjqbnbpa-jamiecaudill.vercel.app/"
+      }
+    ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhYmJkZTRjY2IzMTQzNWI5NGFkNjk4ZDQ0NTQyY2Q0YWE1NmYwNyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/FUQ9wpu90OVzACbbb9/giphy.gif"
   },
   {
