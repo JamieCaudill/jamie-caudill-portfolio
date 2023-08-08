@@ -37,6 +37,7 @@
 
 .navbar__item, .navbar__item > button {
   list-style: none;
+  background-color: transparent;
   border: none;
   margin: 0 1rem;
   padding: 0;
