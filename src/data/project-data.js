@@ -4,7 +4,7 @@ const data = [
     "title": "Humor Me",
     "tech": ["React", "Express", "Knex", "PostgreSQL", "React", "CSS", "HTML", "Cypress"],
     "skills": ["Collaboration", "Project Management", "Project Board", "Slack", "Zoom", "UI/UX Design"],
-    "summary": "Humor Me is a web application that encourages users to laugh and feel light through the generation of random quotes. The user has the option to generate quotes in either a wholesome or chaotic category to best fit their mood in the moment. Additional features include allowing the user to favorite quote posters and create their own. This project was completed during Mod 3 of Turing School of Software and Design. The goal of this project was to learn and implement a new technology. We chose to build a backend server to host our quotes and images, as well as save any user favorited posters. We completed this project over the course of 12 days, including our planning, research and excecution phases. ",
+    "summary": "Humor Me is a web application designed to entertain users with random motivational and humourous posters. The user may choose to add their favorite quote posters to a collection, or create their own. This project was completed during Mod 3 of Turing School of Software and Design. The primary goal was to learn and implement a new technology. We chose to build a backend infrastructure, creating a robust database and server with functional endpoints to provide our quotes and images, as well as save any user favorited posters. We completed this project over the course of 12 days, including planning, research and excecution phases. ",
     "links": [
       {
         "type": "FE Repo",
@@ -16,7 +16,7 @@ const data = [
       },
       {
         "type": "Deployed Site",
-        "link": "https://humor-me-ui-iota.vercel.app/"
+        "link": "https://humor-me-ui.vercel.app/"
       }
     ],
     "gif": "https://user-images.githubusercontent.com/125763236/257078195-71761667-8d86-4f28-85bb-6da4fac1a7f4.gif"
@@ -26,7 +26,7 @@ const data = [
     "title": "Zen and the Art of Tacos",
     "tech": ["React", "CSS", "HTML", "Cypress"],
     "skills": ["UI/UX Design", "Accessibility", "Workflow"],
-    "summary": "Zen and the Art of Tacos is a web-based application for anxious taco lovers. Users are able to generate random inspirational and relaxing quotes by clicking on the taco. Quotes are able to be saved and seen on the favorites page. Quotes may also be removed from favorites. This project was the final solo project for MOD 3 of Turing School of Software and Design, wrapping up all that we've learned about React, Cypress, Router, user stories, projects, and UI/UX design.",
+    "summary": "Zen and the Art of Tacos is a web application for anxious taco lovers. Users are able to generate random inspirational and relaxing quotes by clicking on the taco. Quotes are able to be saved, seen on the favorites page, and/or removed from favorites. This project was the final solo project for MOD 3 of Turing School of Software and Design, wrapping up all that we've learned about React, Cypress, Router, user stories, projects, and UI/UX design.",
     "links": [
       {
         "type": "Repo",
@@ -44,7 +44,7 @@ const data = [
     "title": "Overlook",
     "tech": ["JavaScript", "SCSS", "HTML", "Mocha", "Chai"],
     "skills": ["UI/UX Design", "Network Requests", "Accessibility", "Workflow"],
-    "summary": "Overlook is a web-based hotel-booking application that allows users to login with a username and password. Users will then be taken to a dashboard where they can choose to view their past bookings, their upcoming bookings, the total amount they have spent, or search for new bookings. The search function takes in a date with the option to filter by room type. Once the search results are displayed, the user is able to view room details, and book an available room. Once booked, the room is added to their bookings and the total spent is updated. The users bookings will be available even after page refresh. This project was the final solo project for MOD 2, wrapping up all that we've learned about accessibility, iterators, apis, scope, webpack, and how the internet works.",
+    "summary": "Overlook is a web-based hotel-booking application that allows users to login with a username and password. After login, users are taken to a dashboard where they are able to view their past bookings, their upcoming bookings, the total amount they have spent, or search for and make new bookings. The search function takes in a date with the option to filter by room type. Once the search results are displayed, the user is able to view room details, and book an available room. Once booked, the room is added to their bookings and the total spent is updated. The users bookings will be available even after page refresh. This project was the final solo project for MOD 2, wrapping up all that we've learned about accessibility, iterators, apis, scope, webpack, and how the internet works.",
     "links": [
       {
         "type": "Repo",

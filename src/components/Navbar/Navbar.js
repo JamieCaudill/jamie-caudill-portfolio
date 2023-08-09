@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 const Navbar = () => {
 
   const openResume = () => {
-    window.open('./Caudill_Resume.pdf', '_blank');
+    window.open('./Jamie_Caudill.pdf', '_blank');
   };
 
   return (
