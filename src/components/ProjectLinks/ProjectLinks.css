@@ -1,0 +1,29 @@
+/* ProjectLinks.css */
+.project-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  border-radius: 10px;
+}
+.project-links .project-links__container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-link {
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: #83d6ef;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.project-link:hover {
+  background-color: #4c4b4b;
+  color: white;
+}/*# sourceMappingURL=ProjectLinks.css.map */

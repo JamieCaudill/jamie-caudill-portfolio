@@ -6,7 +6,7 @@ const ProjectLinks = ({project}) => {
 
   const links = project.links.map((link) => {
     return (
-      <a href={link.link} target="_blank" className="project-link">{link.type}</a>
+      <a href={link.link} target="_blank" className="project-link" rel="noreferrer">{link.type}</a>
     )
   })
 
