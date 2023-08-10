@@ -1,5 +1,4 @@
 /* Intro.css */
-
 .intro {
   width: 100vw;
   height: 100vh;
@@ -28,22 +27,18 @@
   opacity: 75%;
   padding: 4rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  h1 {
-    margin-top: auto;
-  }
-  p {
-    padding: 0;
-    font-weight: 500;
-  }
 }
-
-
-
-
+.intro__container h1 {
+  margin-top: auto;
+}
+.intro__container p {
+  padding: 0;
+  font-weight: 500;
+}
 
 .intro__button {
   margin: 1rem 0 1rem 0;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   background-color: #000;
@@ -51,10 +46,10 @@
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .intro__button:hover {
   background-color: #fff;
   color: #000;
-}
+}/*# sourceMappingURL=Intro.css.map */

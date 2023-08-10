@@ -20,19 +20,22 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      <h1>Projects</h1>
+
       <div className="projects__container">
-        <div className="projects__item">
-          <img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" />
-        </div>
-        <div className="projects__item">
-          <img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/zen-tacos.png')} alt="project" />
-        </div>
-        <div className="projects__item">
-          <img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/overlook.png')} alt="project" />
-        </div>
-        <div className="projects__item">
-          <img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" />
+      <h1>Projects</h1>
+        <div className="projects__item-container">
+          <div className="projects__item">
+            <img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" />
+          </div>
+          <div className="projects__item">
+            <img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/zen-tacos.png')} alt="project" />
+          </div>
+          <div className="projects__item">
+            <img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/overlook.png')} alt="project" />
+          </div>
+          <div className="projects__item">
+            <img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" />
+          </div>
         </div>
       </div>
       <div className="projects__project-details">
