@@ -1,5 +1,4 @@
 /* About.css */
-
 .about {
   width: 100vw;
   height: 100vh;
@@ -11,11 +10,10 @@
 .about__image {
   height: 100%;
   text-align: center;
-  line-height: .5;
- h3 {
-  color: grey
- }
-
+  line-height: 0.5;
+}
+.about__image h3 {
+  color: grey;
 }
 
 .about__image-image {
@@ -26,7 +24,7 @@
   align-self: flex-start;
 }
 
-.about__container{
+.about__container {
   padding: 2rem;
   width: 50%;
   margin-left: 2rem;
@@ -34,7 +32,7 @@
   align-items: center;
 }
 
-.about__text{
+.about__text {
   line-height: 1.5;
   margin-left: 2rem;
 }
@@ -43,19 +41,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  margin: 5rem 0  0 8rem;
-  .about__skills-image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-      margin: 0;
-    }
-  }
-  .about__skills-image {
-    width: 75px;
-    height: 75px;
-    margin: 1rem;
-    align-self: flex-start;
-  }
+  margin: 5rem 0 0 8rem;
 }
+.about__skills-container .about__skills-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__skills-container .about__skills-image-container p {
+  margin: 0;
+}
+.about__skills-container .about__skills-image {
+  width: 75px;
+  height: 75px;
+  margin: 1rem;
+  align-self: flex-start;
+}/*# sourceMappingURL=About.css.map */
