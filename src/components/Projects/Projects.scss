@@ -16,6 +16,7 @@
 
 .projects__container {
   width: 85vw;
+  min-height: 50vh;
   overflow-x: scroll;
   display: flex;
   flex-direction: column;
@@ -28,10 +29,25 @@
       width: 25rem;
       border-radius: 5px;
       overflow: hidden;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
       .projects__item-image {
         max-width: 100%;
         cursor: pointer;
+        border-radius: 5px;
+      }
+      h3 {
+        display: none;
+        transition: ease-in-out 0.3s;
+      }
+      &:hover {
+        h3 {
+          display: block;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          padding: 1rem;
+          margin: 0;
+          transition: ease-in-out 0.3s;
+        }
       }
     }
   }

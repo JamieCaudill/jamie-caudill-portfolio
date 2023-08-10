@@ -26,15 +26,19 @@ const Projects = () => {
         <div className="projects__item-container">
           <div className="projects__item">
             <img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" />
+            <h3>Humor Me</h3>
           </div>
           <div className="projects__item">
             <img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/zen-tacos.png')} alt="project" />
+            <h3>Zen Tacos</h3>
           </div>
           <div className="projects__item">
             <img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/overlook.png')} alt="project" />
+            <h3>Overlook</h3>
           </div>
           <div className="projects__item">
             <img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" />
+            <h3>What's Cookin'</h3>
           </div>
         </div>
       </div>
