@@ -16,7 +16,7 @@ const data = [
       },
       {
         "type": "Deployed Site",
-        "link": "https://humor-me-ui.vercel.app/"
+        "link": "https://humor-me-ui-iota.vercel.app/"
       }
     ],
     "gif": "https://user-images.githubusercontent.com/125763236/257078195-71761667-8d86-4f28-85bb-6da4fac1a7f4.gif"
@@ -52,7 +52,7 @@ const data = [
       },
       {
         "type": "Deployed Site",
-        "link": "https://overlook-bmjqbnbpa-jamiecaudill.vercel.app/"
+        "link": "https://overlook-steel.vercel.app/"
       }
     ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhYmJkZTRjY2IzMTQzNWI5NGFkNjk4ZDQ0NTQyY2Q0YWE1NmYwNyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/FUQ9wpu90OVzACbbb9/giphy.gif"
@@ -70,7 +70,7 @@ const data = [
       },
       {
         "type": "Deployed Site",
-        "link": "https://whats-cookin-group-project-681i63c9u-jamiecaudill.vercel.app/"
+        "link": "https://whats-cookin-group-project.vercel.app/"
       }
 
     ],
