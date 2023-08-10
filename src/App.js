@@ -1,9 +1,11 @@
-import './App.css';
+import './App.scss';
 import Intro from './components/Intro/Intro';
 import React from 'react';
 
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/Projects';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 import { gsap } from 'gsap';
 
 
@@ -15,7 +17,10 @@ function App() {
     <main className="app">
       <Navbar />
       <Intro />
+      <About />
       <Projects />
+
+      {/* <Contact /> */}
     </main>
   );
 }

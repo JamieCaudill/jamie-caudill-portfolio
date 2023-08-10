@@ -1,6 +1,6 @@
 // Intro.js
 
-import './Intro.css'
+import './Intro.scss'
 import { Link } from 'react-scroll';
 
 const Intro = () => {

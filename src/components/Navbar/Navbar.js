@@ -1,6 +1,6 @@
 // Navbar.js
 
-import './Navbar.css';
+import './Navbar.scss';
 
 import { Link } from 'react-scroll';
 
@@ -26,6 +26,9 @@ const Navbar = () => {
           </li>
           <li className="navbar__item">
             <button onClick={openResume}>Resume</button>
+          </li>
+          <li className="navbar__item">
+            <Link to="about" spy={true} smooth={true} offset={-50} duration={500}>About</Link>
           </li>
         </ul>
       </nav>

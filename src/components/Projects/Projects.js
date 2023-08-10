@@ -1,6 +1,6 @@
 // Projects.js //
 
-import './Projects.css';
+import './Projects.scss';
 
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import data from '../../data/project-data';

@@ -1,0 +1,4 @@
+const aboutMe = 
+"Wholeheartedly dedicated to the principles of continuous learning, I am a proficient front end software developer with a deep interest in React, JavaScript, and the entire realm of web development. Drawing from my diverse background in physically and mentally demanding industries, I possess the resilience, discipline, and adaptability vital for thriving in the fast-paced world of software engineering. My experiences across various fields have equipped me to swiftly learn and navigate evolving environments, making me an agile problem-solver. Merging a practical background with coding passion, I offer a unique perspective to create innovative solutions and foster seamless teamwork. When I am not at my computer, I am outside exploring the wilderness with skis, a climbing rope, a surfboard, or a camera."
+
+export default aboutMe;

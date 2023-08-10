@@ -1,6 +1,6 @@
 // ProjectLinks.js //
 
-import './ProjectLinks.css';
+import './ProjectLinks.scss';
 
 const ProjectLinks = ({project}) => {
 
