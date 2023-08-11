@@ -92,8 +92,41 @@
   }
 }
 
-
-
+@media  screen and (max-width: 950px) {
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .project-details__header {
+      font-size: .8rem;
+    }
+    .project-details__container {
+      flex-direction: column;
+      .project-details__left {
+        width: 100%;
+        .project-details__tech {
+          ul {
+            justify-content: center;
+          }
+        }
+      }
+      .project-details__right {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        .project-details__summary {
+          width: 100%;
+          max-height: 400px;
+          overflow-y: scroll;
+          .project-details__summary-text {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

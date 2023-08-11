@@ -18,11 +18,10 @@
   }
 }
 
-
-
 .project-link {
   margin: 0.5rem;
   padding: 0.8rem;
+  font-weight: bold;
   border-radius: 5px;
   background-color: $btn;
   color: black;
@@ -31,6 +30,17 @@
   &:hover {
     background-color: $btn-hover;
     color: white;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .project-links {
+    .project-links__container {
+      width: 100%;
+      .project-link {
+        font-size: .8rem;
+      }
+    }
   }
 }
 

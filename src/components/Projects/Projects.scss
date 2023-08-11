@@ -60,3 +60,19 @@
 .projects__project-details {
   height: 100%
 }
+
+@media screen and (max-width: 950px) {
+  .projects {
+    .projects__container {
+      .projects__item-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        .projects__item {
+          width: 90%;
+        }
+      }
+    }
+  }
+  
+}

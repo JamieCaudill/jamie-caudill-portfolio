@@ -85,7 +85,35 @@
   }
 }
 @media screen and (max-width: 950px) {
+  .about .about__container {
+    margin: 0;
+    padding: 0;
+  }
   .about .about__container .about__text {
     width: 30rem;
+  }
+  .about .about__skills-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .about .about__skills-container .about__skills-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about {
+    margin-top: 5rem;
+    height: auto;
+  }
+  .about .about__container {
+    flex-direction: column;
+  }
+  .about .about__container .about__text {
+    margin: 2rem 0;
+    padding: 2rem;
+    border: solid rgb(208, 206, 206) 1px;
+  }
+  .about .about__skills-container {
+    margin: 2rem 0;
   }
 }/*# sourceMappingURL=About.css.map */

@@ -40,4 +40,10 @@
 }
 .contact__links img:hover {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 850px) {
+  .contact .contact__container .contact__links {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Contact.css.map */
