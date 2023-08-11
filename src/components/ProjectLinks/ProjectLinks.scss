@@ -49,11 +49,31 @@
     .project-links__container {
       width: 100%;
       .project-link {
-        text-align: center;
-         font-size: .8rem;
-         width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+        width: 125px;
       }
     }
   }
 }
 
+@media screen and (max-width: 400px) {
+  .project-links {
+    width: 100%;
+    .project-links__container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      .project-link {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .8rem;
+        width: 100px;
+      }
+    }
+  }
+}

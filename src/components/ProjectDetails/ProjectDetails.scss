@@ -172,12 +172,41 @@
   
 }
 
-
-
-
-
-
-
+@media screen and (max-width: 400px) {
+  .project-details {
+    .project-details__header {
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    .project-details__container {
+      .project-details__left {
+        .project-details__image-container {
+          .project-details__image {
+            width: 250px;
+          }
+        }
+        .project-details__tech {
+          ul {
+            justify-content: center;
+          }
+          .project-details__tech-used {
+            p {
+              font-size: .7rem;
+            }
+          }
+        }
+      }
+      .project-details__right {
+        .project-details__summary {
+          .project-details__summary-text {
+            font-size: .7rem;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

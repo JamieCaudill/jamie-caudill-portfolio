@@ -64,10 +64,6 @@
           width: 100px;
           height: 100px;
         }
-
-      }
-      .navbar__logo {
-
       }
       .navbar__items {
         display: flex;
@@ -97,6 +93,40 @@
       justify-content: center;
       .navbar__items__container {
         .navbar__items {
+          .navbar__item {
+            font-size: .8rem;
+            button {
+              font-size: .8rem;
+              height: 40px;
+              width: 80px;
+            }
+          }
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    height: 200px;
+    .navbar__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .navbar__items__container {
+        .navbar__items {
+          .navbar__item {
+            font-size: .65rem;
+            button {
+              background-color: transparent;
+              font-size: .7rem;
+              height: 40px;
+              width: 50px;
+            }
+          }
           margin: 0;
           padding: 0;
         }

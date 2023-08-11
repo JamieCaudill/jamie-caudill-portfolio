@@ -61,4 +61,19 @@
   .projects .projects__container .projects__item-container .projects__item {
     width: 90%;
   }
+}
+@media screen and (max-width: 550px) {
+  .projects .projects__container h1 {
+    align-self: center;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+  .projects .projects__container .projects__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects .projects__container .projects__item-container .projects__item {
+    width: 70%;
+  }
 }/*# sourceMappingURL=Projects.css.map */

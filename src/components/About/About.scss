@@ -146,12 +146,21 @@
         padding: 2rem;
         border: $border;
         overflow-y: scroll;
-        width: 80%;
+        width: 70%;
         height: 50vh;
+        font-size: .8rem;
       }
     }
     .about__skills-container {
       margin: 2rem 0;
+
+      .about__skills-image {
+        width: 25px;
+        height: 25px;
+      }
+      .about__skills-image-text {
+        font-size: .5rem;
+      }
     }
   }
 }

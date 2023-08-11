@@ -48,15 +48,25 @@
   }
 }
 @media screen and (max-width: 550px) {
+  .contact h1 {
+    font-size: 1.5rem;
+  }
   .contact .contact__container {
-    width: 80%;
+    width: 60%;
     padding: 2rem;
+  }
+  .contact .contact__container .contact__links {
+    width: 100%;
+  }
+  .contact .contact__container .contact__links img {
+    width: 40px;
+    height: 40px;
   }
   .contact .contact__container .contact__text {
     padding: 0;
   }
   .contact .contact__container .contact__text .contact__text-paragraph {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0;
     margin: 0;
   }

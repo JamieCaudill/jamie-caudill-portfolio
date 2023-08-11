@@ -15,7 +15,7 @@ const data = [
         "link": "https://github.com/JamieCaudill/humor-me-be"
       },
       {
-        "type": "Deployed Site",
+        "type": "Deployed",
         "link": "https://humor-me-ui-iota.vercel.app/"
       }
     ],
@@ -33,7 +33,7 @@ const data = [
         "link": "https://github.com/JamieCaudill/zen-and-tacos",
       },
       {
-        "type": "Deployed Site",
+        "type": "Deployed",
         "link": "https://zen-and-tacos.vercel.app/"
       }
     ],
@@ -51,7 +51,7 @@ const data = [
         "link": "https://github.com/JamieCaudill/Overlook"
       },
       {
-        "type": "Deployed Site",
+        "type": "Deployed",
         "link": "https://overlook-steel.vercel.app/"
       }
     ],
@@ -69,7 +69,7 @@ const data = [
         "link": "https://github.com/JamieCaudill/whats-cookin-group-project",
       },
       {
-        "type": "Deployed Site",
+        "type": "Deployed",
         "link": "https://whats-cookin-group-project.vercel.app/"
       }
 

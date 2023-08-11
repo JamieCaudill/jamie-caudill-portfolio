@@ -1,7 +1,6 @@
 // ProjectDetails.js //
 
 import './ProjectDetails.scss';
-import data from '../../data/project-data';
 import ProjectLinks from '../ProjectLinks/ProjectLinks';
 
 const ProjectDetails = ({project, tech}) => {
