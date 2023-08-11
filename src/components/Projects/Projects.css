@@ -61,6 +61,9 @@
   .projects .projects__container .projects__item-container .projects__item {
     width: 90%;
   }
+  .projects .projects__container .projects__item-container .projects__item h3:hover {
+    display: none;
+  }
 }
 @media screen and (max-width: 550px) {
   .projects .projects__container h1 {

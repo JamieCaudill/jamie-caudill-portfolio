@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
+  overflow: hidden;
 }
 .about .about__container {
   padding: 2rem;
@@ -52,7 +53,7 @@
 .about__skills-container .about__skills-image-container p {
   margin: 0;
 }
-.about__skills-container .about__skills-image {
+.about__skills-container .about__skills-image-container .about__skills-image {
   width: 75px;
   height: 75px;
   margin: 1rem;

@@ -53,10 +53,6 @@
   }
 }
 
-
-
-
-
 .projects__project-details {
   height: 100%
 }
@@ -70,6 +66,9 @@
         grid-gap: 1rem;
         .projects__item {
           width: 90%;
+          h3:hover {
+            display: none;
+          }
         }
       }
     }

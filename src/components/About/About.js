@@ -37,7 +37,8 @@ const About = () => {
     }
   })
 
-  gsap.fromTo('.about__skills', {
+  gsap.fromTo('.about__skills-container', 
+  {
     x: 500,
   },
   {
@@ -45,7 +46,6 @@ const About = () => {
     x: 0,
     scrollTrigger: {
       trigger: ".about__skills",
-      start: "top center",
     }
   })
   }, [])
