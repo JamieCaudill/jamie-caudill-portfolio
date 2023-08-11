@@ -1,8 +1,28 @@
 // Contact.js //
 
 import './Contact.scss';
+import { useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+
+  useLayoutEffect(() => {
+    gsap.fromTo(".contact", {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 3,
+      scrollTrigger: {
+        trigger: ".contact",
+        start: "top center",
+      }
+    })
+  }, [])
+  
   return (
     <div className="contact">
       <h1 className="contact__text-header">Contact Me</h1>

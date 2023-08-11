@@ -5,8 +5,12 @@ import './Projects.scss';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import data from '../../data/project-data';
 import { Link } from 'react-scroll';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import { useState } from 'react';
+import { useState, useLayoutEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
 
@@ -19,11 +23,39 @@ const Projects = () => {
     setTech(data[target - 1].tech)
   }
 
+  useLayoutEffect(() => {
+    
+    gsap.fromTo(".projects__container-header", {
+      x: -500,
+    },
+    {
+      x: 0,
+      duration: 2,
+      scrollTrigger: {
+        trigger: ".projects__container-header",
+        start: "top center",
+      }
+    }
+    )
+    gsap.fromTo(".projects__item-image", {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 3,
+      scrollTrigger: {
+        trigger: ".projects__item-image",
+        start: "top center",
+      }
+    })
+  }, [])
+
+
   return (
     <div className="projects">
 
       <div className="projects__container">
-      <h1>Projects</h1>
+        <h1 className="projects__container-header">Projects</h1>
         <div className="projects__item-container">
           <div className="projects__item">
             <Link to="project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" /></Link>

@@ -3,14 +3,12 @@
 import './About.scss';
 import aboutMe from '../../data/about-me';
 import { gsap } from 'gsap';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  let nameRef = useRef(null);
-  let titleRef = useRef(null);
 
   useLayoutEffect(() => {
   gsap.fromTo(".about__image", {
@@ -19,7 +17,11 @@ const About = () => {
   {
     x: 0,
     duration: 2,
-    scrollTrigger: ".about__image-image"
+    scrollTrigger: {
+      trigger: ".about__image-image",
+      start: "top center",
+    }
+
   })
 
   gsap.fromTo('.about__text', {
@@ -29,16 +31,22 @@ const About = () => {
     duration: 3,
     delay: 1.5,
     opacity: 1,
-    scrollTrigger: ".about__text"
+    scrollTrigger: {
+      trigger: ".about__text",
+      start: "top center",
+    }
   })
 
   gsap.fromTo('.about__skills', {
-    x: 400,
+    x: 500,
   },
   {
     duration: 2,
     x: 0,
-    scrollTrigger: ".about__skills"
+    scrollTrigger: {
+      trigger: ".about__skills",
+      start: "top center",
+    }
   })
   }, [])
 
