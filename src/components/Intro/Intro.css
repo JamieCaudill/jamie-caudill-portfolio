@@ -52,4 +52,16 @@
 .intro__button:hover {
   background-color: #fff;
   color: #000;
+}
+
+@media screen and (max-width: 700px) {
+  .intro .intro__container {
+    padding: 4rem;
+  }
+  .intro .intro__container h1 {
+    font-size: 1.5rem;
+  }
+  .intro .intro__container p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=Intro.css.map */

@@ -56,5 +56,24 @@
     }
   }
  }
-  
 }
+
+@media screen and (max-width: 550px) {
+  .contact {
+    .contact__container {
+      width: 80%;
+      padding: 2rem;
+      .contact__text {
+        padding: 0;
+        .contact__text-paragraph {
+          font-size: 1rem;
+          padding: 0;
+          margin: 0;
+        }
+
+      }
+
+    }
+  }
+}
+  

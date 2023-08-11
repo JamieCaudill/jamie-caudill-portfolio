@@ -86,5 +86,21 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 550px) {
+  .navbar {
+    height: 200px;
+    .navbar__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .navbar__items__container {
+        .navbar__items {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
 }

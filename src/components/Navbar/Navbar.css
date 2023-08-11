@@ -72,4 +72,18 @@
     width: 100px;
     border-radius: 5px;
   }
+}
+@media screen and (max-width: 550px) {
+  .navbar {
+    height: 200px;
+  }
+  .navbar .navbar__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar .navbar__container .navbar__items__container .navbar__items {
+    margin: 0;
+    padding: 0;
+  }
 }/*# sourceMappingURL=Navbar.css.map */
