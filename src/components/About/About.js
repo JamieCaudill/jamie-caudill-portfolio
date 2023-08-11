@@ -18,7 +18,7 @@ const About = () => {
     x: 0,
     duration: 2,
     scrollTrigger: {
-      trigger: ".about__image-image",
+      trigger: ".about__container",
       start: "top center",
     }
 
@@ -32,7 +32,7 @@ const About = () => {
     delay: 1.5,
     opacity: 1,
     scrollTrigger: {
-      trigger: ".about__text",
+      trigger: ".about__container",
       start: "top center",
     }
   })

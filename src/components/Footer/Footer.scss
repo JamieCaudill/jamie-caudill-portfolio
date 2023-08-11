@@ -4,19 +4,22 @@
 
 .footer {
   width: 100vw;
+  height: 175px;
   padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $primary;
   .footer__container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     h3 {
       color: lighten($btn-hover, 20%);
       padding: 0;
-      margin: .3rem;
+      margin: .5rem;
     }
       a {
         background-color: $btn;
@@ -43,3 +46,40 @@
       }
     }
   }
+
+
+  @media screen and (max-width: 700px) {
+    .footer {
+      .footer__container {
+        h3 {
+          font-size: .8rem;
+        }
+        a {
+          font-size: .8rem;
+        }
+        p {
+          font-size: .8rem;
+        }
+      }
+    } 
+    
+  }
+
+  @media screen and (max-width: 400px) {
+    .footer {
+      .footer__container {
+        h3 {
+          font-size: .6rem;
+        }
+        a {
+          font-size: .6rem;
+        }
+        p {
+          font-size: .6rem;
+        }
+      }
+    } 
+    
+  }
+    
+  

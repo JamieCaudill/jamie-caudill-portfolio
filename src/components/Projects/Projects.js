@@ -43,6 +43,7 @@ const Projects = () => {
     {
       opacity: 1,
       duration: 3,
+      ease: "power1",
       scrollTrigger: {
         trigger: ".projects__item-image",
         start: "top center",

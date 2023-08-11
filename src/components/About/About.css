@@ -17,6 +17,7 @@
   height: 100%;
   text-align: center;
   line-height: 0.5;
+  position: relative;
 }
 .about .about__container .about__image h2 {
   opacity: 1;

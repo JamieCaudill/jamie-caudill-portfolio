@@ -2,8 +2,31 @@
 
 import './ProjectDetails.scss';
 import ProjectLinks from '../ProjectLinks/ProjectLinks';
+import { useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectDetails = ({project, tech}) => {
+
+  useLayoutEffect(() => {
+    gsap.fromTo(".project-details__header", {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 2,
+    }
+    )
+    gsap.fromTo(".project-details__container", {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 3,
+    })
+  },[project])
   
   const techUsed = tech.map((tech, index) => {
     return <p key={index}>{tech}</p>
