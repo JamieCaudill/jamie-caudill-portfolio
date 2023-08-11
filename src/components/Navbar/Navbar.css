@@ -50,4 +50,26 @@
 
 .navbar__item::marker {
   content: none;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar .navbar__container .navbar__logo .navbar__logo-image {
+    width: 100px;
+    height: 100px;
+  }
+  .navbar .navbar__container .navbar__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .navbar__container .navbar__items .navbar__item {
+    font-size: 1rem;
+  }
+  .navbar .navbar__container .navbar__items .navbar__item button {
+    font-size: 1rem;
+    background-color: #83d6ef;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+  }
 }/*# sourceMappingURL=Navbar.css.map */
