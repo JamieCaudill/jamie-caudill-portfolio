@@ -52,6 +52,11 @@
   content: none;
 }
 
+.active {
+  background-color: #83d6ef;
+  transition: background-color 0.3s ease-in-out;
+}
+
 @media screen and (max-width: 700px) {
   .navbar .navbar__container .navbar__logo .navbar__logo-image {
     width: 100px;

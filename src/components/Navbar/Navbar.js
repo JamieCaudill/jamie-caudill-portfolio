@@ -22,7 +22,7 @@ const Navbar = () => {
               <Link to="intro" spy={true} smooth={true} offset={0} duration={500}>Home</Link>
             </li> */}
             <li className="navbar__item">
-              <Link to="projects" spy={true} smooth={true} offset={0} duration={500}>Projects</Link>
+              <Link to="projects" activeClass="active" spy={true} smooth={true} offset={0} duration={500}>Projects</Link>
             </li>
             <li className="navbar__item">
               <Link to="about" spy={true} smooth={true} offset={0} duration={500}>About</Link>

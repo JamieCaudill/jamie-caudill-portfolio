@@ -18,6 +18,9 @@
   text-align: center;
   line-height: 0.5;
 }
+.about .about__container .about__image h2 {
+  opacity: 1;
+}
 .about .about__container .about__image h3 {
   color: grey;
 }
@@ -27,6 +30,7 @@
   border-radius: 50%;
   margin: 1rem;
   align-self: flex-start;
+  overflow: hidden;
 }
 .about .about__container .about__text {
   line-height: 1.5;

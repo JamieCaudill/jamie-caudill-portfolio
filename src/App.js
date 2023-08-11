@@ -8,12 +8,16 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// gsap.from(".intro__container", {duration: 2.5, y: -500, ease: "power4.out" })
 
 
-
-gsap.from(".intro__container", {duration: 2.5, y: -500, ease: "power4.out" })
 
 function App() {
+
   return (
     <main className="app">
       <Navbar />

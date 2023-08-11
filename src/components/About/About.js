@@ -2,15 +2,55 @@
 
 import './About.scss';
 import aboutMe from '../../data/about-me';
+import { gsap } from 'gsap';
+import { useLayoutEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  let nameRef = useRef(null);
+  let titleRef = useRef(null);
+
+  useLayoutEffect(() => {
+  gsap.fromTo(".about__image", {
+    x: -400,
+  },
+  {
+    x: 0,
+    duration: 2,
+    scrollTrigger: ".about__image-image"
+  })
+
+  gsap.fromTo('.about__text', {
+    opacity: 0,
+  },
+  {
+    duration: 3,
+    delay: 1.5,
+    opacity: 1,
+    scrollTrigger: ".about__text"
+  })
+
+  gsap.fromTo('.about__skills', {
+    x: 400,
+  },
+  {
+    duration: 2,
+    x: 0,
+    scrollTrigger: ".about__skills"
+  })
+  }, [])
+
   return (
     <div className="about">
       <div className="about__container">
         <div className="about__image">
           <img className="about__image-image" src={require('../../images/portrait.jpeg')} alt="headshot" />
-          <h2>Jamie Caudill</h2>
-          <h3>Software Developer</h3>
+          <div className="about__subtext">
+            <h2>Jamie Caudill</h2>
+            <h3>Software Developer</h3>
+          </div>
         </div>
         <div className="about__text">
           <h1 className="about__text-header">About Me</h1>
