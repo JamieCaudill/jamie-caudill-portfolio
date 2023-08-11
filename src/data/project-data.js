@@ -2,7 +2,7 @@ const data = [
   {
     "id": "1",
     "title": "Humor Me",
-    "tech": ["React", "Express", "Knex", "PostgreSQL", "React", "CSS", "HTML", "Cypress"],
+    "tech": ["React", "Express", "Knex", "PostgreSQL", "CSS", "HTML", "Cypress"],
     "skills": ["Collaboration", "Project Management", "Project Board", "Slack", "Zoom", "UI/UX Design"],
     "summary": "Humor Me is a web application designed to entertain users with random motivational and humourous posters. The user may choose to add their favorite quote posters to a collection, or create their own. This project was completed during Mod 3 of Turing School of Software and Design. The primary goal was to learn and implement a new technology. We chose to build a backend infrastructure, creating a robust database and server with functional endpoints to provide our quotes and images, as well as save any user favorited posters. We completed this project over the course of 12 days, including planning, research and excecution phases. ",
     "links": [
