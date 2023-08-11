@@ -44,4 +44,16 @@
   }
 }
 
+@media screen and (max-width: 550px) {
+  .project-links {
+    .project-links__container {
+      width: 100%;
+      .project-link {
+        text-align: center;
+         font-size: .8rem;
+         width: 100px;
+      }
+    }
+  }
+}
 

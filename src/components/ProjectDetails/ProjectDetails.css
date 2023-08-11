@@ -116,4 +116,30 @@
   .project-details .project-details__container .project-details__right .project-details__summary .project-details__summary-text {
     font-size: 1rem;
   }
+}
+@media screen and (max-width: 550px) {
+  .project-details .project-details__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-details .project-details__header h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .project-details .project-details__container .project-details__left .project-details__image-container .project-details__image {
+    width: 300px;
+  }
+  .project-details .project-details__container .project-details__left .project-details__tech ul {
+    justify-content: center;
+  }
+  .project-details .project-details__container .project-details__left .project-details__tech .project-details__tech-used p {
+    font-size: 0.8rem;
+  }
+  .project-details .project-details__container .project-details__right .project-details__summary .project-details__summary-text {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=ProjectDetails.css.map */

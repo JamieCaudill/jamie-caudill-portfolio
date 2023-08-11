@@ -36,4 +36,14 @@
   .project-links .project-links__container .project-link {
     font-size: 0.8rem;
   }
+}
+@media screen and (max-width: 550px) {
+  .project-links .project-links__container {
+    width: 100%;
+  }
+  .project-links .project-links__container .project-link {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100px;
+  }
 }/*# sourceMappingURL=ProjectLinks.css.map */

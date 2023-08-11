@@ -135,3 +135,24 @@
   }
 }
 
+@media screen and (max-width: 550px) {
+  .about {
+    margin-top: 5rem;
+    height: auto;
+    .about__container {
+      flex-direction: column;
+      .about__text {
+        margin: 2rem 0;
+        padding: 2rem;
+        border: $border;
+        overflow-y: scroll;
+        width: 80%;
+        height: 50vh;
+      }
+    }
+    .about__skills-container {
+      margin: 2rem 0;
+    }
+  }
+}
+
