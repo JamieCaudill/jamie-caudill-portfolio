@@ -56,7 +56,7 @@ const About = () => {
     <div className="about">
       <div className="about__container">
         <div className="about__image">
-          <img className="about__image-image" src={require('../../images/portrait.jpeg')} alt="headshot" />
+          <img className="about__image-image" src={require('../../images/portrait2.jpg')} alt="headshot" />
           <div className="about__subtext">
             <h2>Jamie Caudill</h2>
             <h3>Software Developer</h3>
