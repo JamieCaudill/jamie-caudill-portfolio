@@ -71,6 +71,10 @@ const About = () => {
       </div>
       <div className="about__skills">
         <div className="about__skills-container">
+          <div className="about__skills-image-container">  
+            <img className="about__skills-image" src={require('../../images/react.png')} alt="react" />
+            <p className="about__skills-image-text">React</p>
+          </div>
           <div className="about__skills-image-container">
             <img className="about__skills-image" src={require('../../images/html.png')} alt="html" />
             <p className="about__skills-image-text">HTML</p>
@@ -82,10 +86,6 @@ const About = () => {
           <div className="about__skills-image-container">
             <img className="about__skills-image" src={require('../../images/js.png')} alt="javascript" />
             <p className="about__skills-image-text">JavaScript</p>
-          </div>
-          <div className="about__skills-image-container">  
-            <img className="about__skills-image" src={require('../../images/react.png')} alt="react" />
-            <p className="about__skills-image-text">React</p>
           </div>
           <div className="about__skills-image-container">
             <img className="about__skills-image" src={require('../../images/git.png')} alt="git" />
@@ -99,7 +99,20 @@ const About = () => {
             <img className="about__skills-image" src={require('../../images/express.png')} alt="express" />
             <p className="about__skills-image-text">Express</p>
           </div>
+          <div className="about__skills-image-container">
+            <img className="about__skills-image" src={require('../../images/knex-logo.png')} alt="knex" />
+            <p className="about__skills-image-text">Knex</p>
+          </div>
+          <div className="about__skills-image-container">
+            <img className="about__skills-image" src={require('../../images/postgresql.png')} alt="postgresql" />
+            <p className="about__skills-image-text">PostgreSQL</p>
+          </div>
+          <div className="about__skills-image-container">
+            <img className="about__skills-image" src={require('../../images/gsap.png')} alt="nodejs" />
+            <p className="about__skills-image-text">GSAP</p>
+          </div>
         </div>
+
       </div>
     </div>
   )
