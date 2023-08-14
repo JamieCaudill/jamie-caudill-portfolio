@@ -37,16 +37,20 @@ const Projects = () => {
       }
     }
     )
-    gsap.fromTo(".projects__item-image", {
+    gsap.fromTo(".projects__item", {
       opacity: 0,
     },
     {
       opacity: 1,
-      duration: 3,
-      ease: "power1",
+      duration: 1.5,
+      ease: "power2.inOut",
       scrollTrigger: {
-        trigger: ".projects__item-image",
+        trigger: ".projects__item",
         start: "top center",
+      },
+      stagger: {
+        amount: 1.5
+
       }
     })
   }, [])

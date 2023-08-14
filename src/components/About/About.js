@@ -17,6 +17,7 @@ const About = () => {
   {
     x: 0,
     duration: 2,
+    ease: "power1.out",
     scrollTrigger: {
       trigger: ".about__container",
       start: "top center",
@@ -29,8 +30,9 @@ const About = () => {
   },
   {
     duration: 3,
-    delay: 1.5,
+    delay: 1,
     opacity: 1,
+    ease: "power2.inOut",
     scrollTrigger: {
       trigger: ".about__container",
       start: "top center",
