@@ -18,9 +18,6 @@ const Navbar = () => {
         </div>
         <nav className="navbar__items__container">
           <ul className="navbar__items">
-            {/* <li className="navbar__item">
-              <Link to="intro" spy={true} smooth={true} offset={0} duration={500}>Home</Link>
-            </li> */}
             <li className="navbar__item">
               <Link to="projects" activeClass="active" spy={true} smooth={true} offset={0} duration={500}>Projects</Link>
             </li>

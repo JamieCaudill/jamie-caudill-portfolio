@@ -62,20 +62,24 @@ const Projects = () => {
       <div className="projects__container">
         <h1 className="projects__container-header">Projects</h1>
         <div className="projects__item-container">
+        <div className="projects__item">
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/everuse.png')} alt="project" /></Link>
+            <h3>EverUse</h3>
+          </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" /></Link>
             <h3>Humor Me</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/zen-tacos.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/zen-tacos.png')} alt="project" /></Link>
             <h3>Zen Tacos</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/overlook.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/overlook.png')} alt="project" /></Link>
             <h3>Overlook</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="5" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" /></Link>
             <h3>What's Cookin'</h3>
           </div>
         </div>
