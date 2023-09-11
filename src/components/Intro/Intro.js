@@ -39,7 +39,7 @@ const Intro = () => {
           <h1 className="intro__text">Hi. I'm Jamie.</h1>
           <h1>A Creative.</h1>
           <p>I am also a software developer who crafts captivating UIs. I blend my love for photography and the wilderness to inspire innovative designs.</p>
-          <Link to="about" spy={true} smooth={true} offset={0} duration={1000}><button className="intro__button">View My Work</button></Link>
+          <Link to="about" spy={true} smooth={true} offset={0} duration={1000}><button className="intro__button">View More</button></Link>
         </div>
       </div>
     </div>
