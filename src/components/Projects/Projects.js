@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       x: 0,
-      duration: 2,
+      duration: 1,
       scrollTrigger: {
         trigger: ".projects__container-header",
         start: "top center",
@@ -42,14 +42,14 @@ const Projects = () => {
     },
     {
       opacity: 1,
-      duration: 1.5,
+      duration: 1,
       ease: "power2.inOut",
       scrollTrigger: {
-        trigger: ".projects__item",
+        trigger: ".projects__container",
         start: "top center",
       },
       stagger: {
-        amount: 1.5
+        amount: 1
 
       }
     })

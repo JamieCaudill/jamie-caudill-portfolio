@@ -15,7 +15,7 @@ const Contact = () => {
     },
     {
       opacity: 1,
-      duration: 3,
+      duration: 1,
       scrollTrigger: {
         trigger: ".contact",
         start: "top center",

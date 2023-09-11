@@ -16,7 +16,7 @@ const About = () => {
   },
   {
     x: 0,
-    duration: 2,
+    duration: 1,
     ease: "power1.out",
     scrollTrigger: {
       trigger: ".about__container",
@@ -29,8 +29,8 @@ const About = () => {
     opacity: 0,
   },
   {
-    duration: 3,
-    delay: 1,
+    duration: 1.5,
+    delay: .5,
     opacity: 1,
     ease: "power2.inOut",
     scrollTrigger: {
@@ -44,7 +44,7 @@ const About = () => {
     x: 500,
   },
   {
-    duration: 2,
+    duration: 1,
     x: 0,
     scrollTrigger: {
       trigger: ".about__skills",

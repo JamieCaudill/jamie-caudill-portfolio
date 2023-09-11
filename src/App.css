@@ -3,4 +3,10 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  max-width: 1600px;
 }/*# sourceMappingURL=App.css.map */

@@ -1,7 +1,7 @@
 /* Projects.css */
 
 .projects {
-  min-height: 80vh;
+  min-height: 40vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -22,12 +22,16 @@
   .projects__item-container {
     display: flex;
     max-width: 100%;
+
     .projects__item {
       margin: 1rem;
       width: 25rem;
       border-radius: 5px;
       overflow: hidden;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      a {
+        display: block;
+      }
       .projects__item-image {
         max-width: 100%;
         cursor: pointer;
@@ -39,7 +43,6 @@
       }
       h3 {
         display: none;
-        transition: ease-in-out 0.3s;
       }
     }
   }
