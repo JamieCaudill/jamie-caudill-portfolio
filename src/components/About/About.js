@@ -19,8 +19,8 @@ const About = () => {
     duration: 1,
     ease: "power1.out",
     scrollTrigger: {
-      trigger: ".about__container",
-      start: "top center",
+      trigger: ".intro",
+      start: "bottom center",
     }
 
   })
@@ -30,12 +30,11 @@ const About = () => {
   },
   {
     duration: 1.5,
-    delay: .5,
     opacity: 1,
     ease: "power2.inOut",
     scrollTrigger: {
-      trigger: ".about__container",
-      start: "top center",
+      trigger: ".intro",
+      start: "bottom center",
     }
   })
 
@@ -44,10 +43,11 @@ const About = () => {
     x: 500,
   },
   {
-    duration: 1,
+    duration: 1.5,
     x: 0,
     scrollTrigger: {
-      trigger: ".about__skills",
+      trigger: ".intro",
+      start: "bottom center",
     }
   })
   }, [])
@@ -56,7 +56,7 @@ const About = () => {
     <div className="about">
       <div className="about__container">
         <div className="about__image">
-          <img className="about__image-image" src={require('../../images/portrait2.jpg')} alt="headshot" />
+          <img className="about__image-image" src={require('../../images/portrait2.jpeg')} alt="headshot" />
           <div className="about__subtext">
             <h2>Jamie Caudill</h2>
             <h3>Software Developer</h3>

@@ -26,14 +26,15 @@ const Projects = () => {
   useLayoutEffect(() => {
     
     gsap.fromTo(".projects__container-header", {
-      x: -500,
+      opacity: 0,
     },
     {
-      x: 0,
+      opacity: 1,
       duration: 1,
       scrollTrigger: {
-        trigger: ".projects__container-header",
-        start: "top center",
+        trigger: ".about__text-paragraph",
+        start: "bottom center",
+        markers: true,
       }
     }
     )
@@ -45,12 +46,11 @@ const Projects = () => {
       duration: 1,
       ease: "power2.inOut",
       scrollTrigger: {
-        trigger: ".projects__container",
-        start: "top center",
+        trigger: ".about__container",
+        start: "bottom center",
       },
       stagger: {
         amount: 1
-
       }
     })
   }, [])
@@ -63,23 +63,23 @@ const Projects = () => {
         <h1 className="projects__container-header">Projects</h1>
         <div className="projects__item-container">
         <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/everuse.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="1" onClick={handleClick} src={require('../../images/everuse.jpg')} alt="project" /></Link>
             <h3>EverUse</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/humor-me.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="2" onClick={handleClick} src={require('../../images/humor-me.jpg')} alt="project" /></Link>
             <h3>Humor Me</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/zen-tacos.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/zen-tacos.jpg')} alt="project" /></Link>
             <h3>Zen Tacos</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/overlook.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/overlook.jpg')} alt="project" /></Link>
             <h3>Overlook</h3>
           </div>
           <div className="projects__item">
-            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={500}><img className="projects__item-image" id="5" onClick={handleClick} src={require('../../images/whats-cookin.png')} alt="project" /></Link>
+            <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="5" onClick={handleClick} src={require('../../images/whats-cookin.jpg')} alt="project" /></Link>
             <h3>What's Cookin'</h3>
           </div>
         </div>
