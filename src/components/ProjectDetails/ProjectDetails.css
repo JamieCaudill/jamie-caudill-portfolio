@@ -110,7 +110,6 @@
   }
   .project-details .project-details__container .project-details__right .project-details__summary {
     width: 100%;
-    max-height: 400px;
     overflow-y: scroll;
   }
   .project-details .project-details__container .project-details__right .project-details__summary .project-details__summary-text {
