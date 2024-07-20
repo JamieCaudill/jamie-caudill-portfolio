@@ -8,6 +8,8 @@
   align-items: center;
   background-color: #f5f5f5;
   overflow: hidden;
+  justify-content: center;
+  max-width: 1200px;
 
   .about__container {
     padding: 2rem;
@@ -23,10 +25,14 @@
       position: relative;
       h2 {
         opacity: 1;
+        font-size: 1.5rem;
+        font-weight: 500;
       }
 
       h3 {
-        color: grey
+        color: grey;
+        font-size: 1rem;
+        font-weight: 300;
       }
 
       img {
@@ -42,6 +48,10 @@
     .about__text{
       line-height: 1.5;
       margin-left: 2rem;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
     }
   }
 }

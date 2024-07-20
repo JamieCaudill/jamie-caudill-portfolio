@@ -73,10 +73,10 @@ const Projects = () => {
             <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="3" onClick={handleClick} src={require('../../images/zen-tacos.jpg')} alt="project" /></Link>
             <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><h3 id="3" onClick={handleClick}>Zen Tacos</h3></Link>
           </div>
-          <div className="projects__item">
+          {/* <div className="projects__item">
             <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><img className="projects__item-image" id="4" onClick={handleClick} src={require('../../images/overlook.jpg')} alt="project" /></Link>
             <Link to="projects__project-details" spy={true} smooth={true} offset={0} duration={200}><h3 id="4" onClick={handleClick}>Overlook</h3></Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="projects__project-details">

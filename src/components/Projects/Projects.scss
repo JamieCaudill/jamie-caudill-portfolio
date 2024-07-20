@@ -9,12 +9,14 @@
   h1 {
     align-self: flex-start;
     margin-left: 1rem;
+    font-weight: 500;
   }
 }
 
 
 .projects__container {
   width: 85vw;
+  max-width: 1200px;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -45,9 +47,11 @@
         margin: 0;
         padding: 0.5rem;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: #fff;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 200;
         transition: ease-in-out 0.3s;
         cursor: pointer;
         &:hover {
