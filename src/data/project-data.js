@@ -14,10 +14,10 @@ const data = [
         "type": "BE Repo",
         "link": "https://github.com/EverUse/EverUse-BE"
       },
-      {
-        "type": "Visit Site",
-        "link": "https://everuse-fe-c2ebec288f10.herokuapp.com/"
-      }
+      // {
+      //   "type": "Visit Site",
+      //   "link": "https://everuse-fe-c2ebec288f10.herokuapp.com/"
+      // }
     ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXBndjhpbmpwdG4xZnpwOGs1MXd3NndmM2J0ejl1OWo3cjVzZmk2aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XI2yOOOzQq01U4AcaA/giphy.gif"
   }, 
@@ -36,10 +36,10 @@ const data = [
         "type": "BE Repo",
         "link": "https://github.com/JamieCaudill/humor-me-be"
       },
-      {
-        "type": "Visit Site",
-        "link": "https://humor-me-ui-iota.vercel.app/"
-      }
+      // {
+      //   "type": "Visit Site",
+      //   "link": "https://humor-me-ui-iota.vercel.app/"
+      // }
     ],
     "gif": "https://user-images.githubusercontent.com/125763236/257078195-71761667-8d86-4f28-85bb-6da4fac1a7f4.gif"
   }, 
@@ -54,10 +54,10 @@ const data = [
         "type": "Repo",
         "link": "https://github.com/JamieCaudill/zen-and-tacos",
       },
-      {
-        "type": "Visit Site",
-        "link": "https://zen-and-tacos.vercel.app/"
-      }
+      // {
+      //   "type": "Visit Site",
+      //   "link": "https://zen-and-tacos.vercel.app/"
+      // }
     ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZTFqODV0MTFucG9nZjVsbm8yczl1eXoxem1keWMxMzh0dTVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/egiGyelUCMxjMaPbHO/giphy.gif"
   },
@@ -72,10 +72,10 @@ const data = [
         "type": "Repo",
         "link": "https://github.com/JamieCaudill/Overlook"
       },
-      {
-        "type": "Visit Site",
-        "link": "https://overlook-steel.vercel.app/"
-      }
+      // {
+      //   "type": "Visit Site",
+      //   "link": "https://overlook-steel.vercel.app/"
+      // }
     ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhYmJkZTRjY2IzMTQzNWI5NGFkNjk4ZDQ0NTQyY2Q0YWE1NmYwNyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/FUQ9wpu90OVzACbbb9/giphy.gif"
   },
@@ -90,10 +90,10 @@ const data = [
         "type": "Repo",
         "link": "https://github.com/JamieCaudill/whats-cookin-group-project",
       },
-      {
-        "type": "Visit Site",
-        "link": "https://whats-cookin-group-project.vercel.app/"
-      }
+      // {
+      //   "type": "Visit Site",
+      //   "link": "https://whats-cookin-group-project.vercel.app/"
+      // }
 
     ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExemJvNHhleWJscWdvYndyOGtnejl2bHRiN3R0M3d0NTFyb293NmN5MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rv9CrKhOAyLhn70YYh/giphy.gif"

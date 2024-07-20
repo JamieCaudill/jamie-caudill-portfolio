@@ -33,7 +33,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="contact__links">
-          <a href="mailto:jcaudill22@turing.edu" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:jamie@mybalto.com" target="_blank" rel="noopener noreferrer">
             <img className="contact__links-image" src={require('../../images/gmail.png')} alt="email" />
           </a>
           <a href="https://www.linkedin.com/in/jamie-caudill/" target="_blank" rel="noopener noreferrer">
