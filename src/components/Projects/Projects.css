@@ -7,6 +7,7 @@
   align-items: center;
 }
 .projects h1 {
+  font-size: 1.5rem;
   align-self: flex-start;
   margin-left: 1rem;
   font-weight: 500;
@@ -55,9 +56,6 @@
   transition: ease-in-out 0.3s;
   cursor: pointer;
 }
-.projects__container .projects__item-container .projects__item h3:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
 .projects__project-details {
   height: 100%;
@@ -71,9 +69,6 @@
   }
   .projects .projects__container .projects__item-container .projects__item {
     width: 90%;
-  }
-  .projects .projects__container .projects__item-container .projects__item h3:hover {
-    display: none;
   }
 }
 @media screen and (max-width: 550px) {
