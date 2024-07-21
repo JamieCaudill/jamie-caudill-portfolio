@@ -12,10 +12,12 @@ const About = () => {
 
   useLayoutEffect(() => {
   gsap.fromTo(".about__image", {
-    x: -400,
+    y: 50,
+    opacity: 0,
   },
   {
-    x: 0,
+    opacity: 1,
+    y: 0,
     duration: 1,
     ease: "power1.out",
     scrollTrigger: {
@@ -40,11 +42,13 @@ const About = () => {
 
   gsap.fromTo('.about__skills-container', 
   {
-    x: 500,
+    y: 50,
+    opacity: 0,
   },
   {
+    opacity: 1,
     duration: 1.5,
-    x: 0,
+    y: 0,
     scrollTrigger: {
       trigger: ".intro",
       start: "bottom center",

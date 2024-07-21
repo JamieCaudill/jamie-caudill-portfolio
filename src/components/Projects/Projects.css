@@ -16,7 +16,6 @@
 .projects__container {
   width: 85vw;
   max-width: 1200px;
-  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;

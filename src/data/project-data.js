@@ -1,6 +1,24 @@
 const data = [
-  {
+    {
     "id": "1",
+    "title": "myBalto Foundation",
+    "tech": ["JavaScript, CSS, HTML, WeWeb, Xano, REST API"],
+    "skills": ["UI/UX Design", "REST API", "DevOps", "Project Management", "Full Stack Development"],
+    "summary": "At myBalto Foundation, we offer SaaS solutions to create, manage, and track angel funds for veterinary hospitals, while also providing fundraising services. Our goal is to prevent economic euthanasia, increase the number of pets receiving life-saving care, and reduce the compassion fatigue experienced by veterinarians. As the sole Full Stack Software Developer for both the for-profit and non-profit branches, I am responsible for reading, writing, testing, and deploying the majority of features and updates across several web-based applications. My role requires the ability to multi-task and adapt quickly to the dynamic demands of a small-team startup, navigating a wide array of technologies. Within my first month, I successfully reduced costs by over $2,000 annually by utilizing SDKs and APIs to eliminate the need for external SaaS providers for the charity platform. Currently, I manage four different web-based applications: two in production and two in development.",
+    "links": [
+      {
+        "type": "myBalto Donation Platform",
+        "link": "https://mybalto.donation.mybaltofoundation.org"
+      },
+      {
+        "type": "myBalto Dashboard",
+        "link": "https://mybalto.foundation.mybalto.com"
+      }
+    ],
+    "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BzajAwYzUzdzI1cHpmbnNjOXA2bDFvbWN4aDM2czU2am85eHVybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Tb8ZM7LXStn44a4BpM/giphy.gif"
+  },
+  {
+    "id": "2",
     "title": "EverUse",
     "tech": ["React", "SASS", "GraphQL", "Cypress"],
     "skills": ["Collaboration", "Communication with Clients", "Full Stack Experience", "Slack", "Zoom", "UI/UX Design"],
@@ -22,7 +40,7 @@ const data = [
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXBndjhpbmpwdG4xZnpwOGs1MXd3NndmM2J0ejl1OWo3cjVzZmk2aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XI2yOOOzQq01U4AcaA/giphy.gif"
   }, 
   {
-    "id": "2",
+    "id": "3",
     "title": "Humor Me",
     "tech": ["React", "Express", "Knex", "PostgreSQL", "CSS", "HTML", "Cypress"],
     "skills": ["Collaboration", "Project Management", "Project Board", "Slack", "Zoom", "UI/UX Design"],
@@ -44,7 +62,7 @@ const data = [
     "gif": "https://user-images.githubusercontent.com/125763236/257078195-71761667-8d86-4f28-85bb-6da4fac1a7f4.gif"
   }, 
   {
-    "id": "3",
+    "id": "4",
     "title": "Zen and the Art of Tacos",
     "tech": ["React", "CSS", "HTML", "Cypress"],
     "skills": ["UI/UX Design", "Accessibility", "Workflow"],
@@ -60,44 +78,7 @@ const data = [
       // }
     ],
     "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZTFqODV0MTFucG9nZjVsbm8yczl1eXoxem1keWMxMzh0dTVnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/egiGyelUCMxjMaPbHO/giphy.gif"
-  },
-  // {
-  //   "id": "4",
-  //   "title": "Overlook",
-  //   "tech": ["JavaScript", "SCSS", "HTML", "Mocha", "Chai"],
-  //   "skills": ["UI/UX Design", "Network Requests", "Accessibility", "Workflow"],
-  //   "summary": "Overlook is a web-based hotel-booking application that allows users to login with a username and password. After login, users are taken to a dashboard where they are able to view their past bookings, their upcoming bookings, the total amount they have spent, or search for and make new bookings. The search function takes in a date with the option to filter by room type. Once the search results are displayed, the user is able to view room details, and book an available room. Once booked, the room is added to their bookings and the total spent is updated. The users bookings will be available even after page refresh. This project was the final solo project for MOD 2, wrapping up all that we've learned about accessibility, iterators, apis, scope, webpack, and how the internet works.",
-  //   "links": [
-  //     {
-  //       "type": "Repo",
-  //       "link": "https://github.com/JamieCaudill/Overlook"
-  //     },
-  //     // {
-  //     //   "type": "Visit Site",
-  //     //   "link": "https://overlook-steel.vercel.app/"
-  //     // }
-  //   ],
-  //   "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhYmJkZTRjY2IzMTQzNWI5NGFkNjk4ZDQ0NTQyY2Q0YWE1NmYwNyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/FUQ9wpu90OVzACbbb9/giphy.gif"
-  // },
-  // {
-  //   "id": "5",
-  //   "title": "What's Cookin",
-  //   "tech": ["JavaScript", "CSS", "HTML", "Mocha", "Chai"],
-  //   "skills": ["Collaboration", "Project Management", "TDD", "Project Board", "Slack", "Zoom", "UI/UX Design"],
-  //   "summary": "What's Cookin'? is a group project completed as a part of Module 2 at Turing School of Software Design's Front-End curriculum. The application hosts a variety of recipes that can be viewed as a whole, by course (salads, hor d'oevres, main courses, sides), or searched by a tag or recipe name to show relevent recipes. When looking at a recipe's page that recipe can be saved to the users saved recipes page. When looking at the saved recipe collection the user may search through their recipes and delete recipes of their choosing.",
-  //   "links": [
-  //     {
-  //       "type": "Repo",
-  //       "link": "https://github.com/JamieCaudill/whats-cookin-group-project",
-  //     },
-  //     // {
-  //     //   "type": "Visit Site",
-  //     //   "link": "https://whats-cookin-group-project.vercel.app/"
-  //     // }
-
-  //   ],
-  //   "gif": "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExemJvNHhleWJscWdvYndyOGtnejl2bHRiN3R0M3d0NTFyb293NmN5MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rv9CrKhOAyLhn70YYh/giphy.gif"
-  // }
+  }
 ]
 
 export default data;

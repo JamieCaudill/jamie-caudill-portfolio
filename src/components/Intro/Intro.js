@@ -15,7 +15,7 @@ const Intro = () => {
       opacity: 0,
     },
     {
-      opacity: .7,
+      opacity: .8,
       duration: 1,
       delay: .5,
       ease: "power3",
