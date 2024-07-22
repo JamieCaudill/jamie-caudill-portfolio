@@ -3,7 +3,7 @@
   height: 100vh;
   margin: 0; /* Reset default body margin */
   padding: 0; /* Reset default body padding */
-  background-image: url("../../images/bg.jpg");
+  background-image: url("../../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
