@@ -16,7 +16,7 @@ const ProjectDetails = ({project, tech}) => {
     },
     {
       opacity: 1,
-      duration: 2,
+      duration: 1,
     }
     )
     gsap.fromTo(".project-details__container", {
@@ -24,7 +24,7 @@ const ProjectDetails = ({project, tech}) => {
     },
     {
       opacity: 1,
-      duration: 2,
+      duration: 1,
       ease: "power2.out",
     })
   },[project])

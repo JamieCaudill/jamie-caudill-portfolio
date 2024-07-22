@@ -31,7 +31,7 @@ const About = () => {
     opacity: 0,
   },
   {
-    duration: 1.5,
+    duration: 1,
     opacity: 1,
     ease: "power2.inOut",
     scrollTrigger: {
@@ -47,7 +47,7 @@ const About = () => {
   },
   {
     opacity: 1,
-    duration: 1.5,
+    duration: 1,
     y: 0,
     scrollTrigger: {
       trigger: ".intro",
