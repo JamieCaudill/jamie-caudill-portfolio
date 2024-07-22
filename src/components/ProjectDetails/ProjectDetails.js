@@ -44,7 +44,10 @@ const ProjectDetails = ({project, tech}) => {
       <div className="project-details__container">
         <div className="project-details__left">
           <div className="project-details__image-container">
-            <img className="project-details__image" src={project.gif} alt="project" />
+            <img className="project-details__image" 
+              src={project.gif}
+              alt="project"
+              />
           </div>
           <div className="project-details__tech">
             <div className="project-details__tech-used">

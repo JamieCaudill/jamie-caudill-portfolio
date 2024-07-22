@@ -4,7 +4,6 @@ import './Projects.scss';
 
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import data from '../../data/project-data';
-import { Link } from 'react-scroll';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
