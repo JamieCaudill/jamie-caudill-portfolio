@@ -33,7 +33,7 @@ const Intro = () => {
   }, [])
 
   return (
-    <div className="intro" id="intro">
+    <div className="intro" id="intro" background="./background.jpg">
       <div className="intro__container">
         <div className="intro__text-container">
           <h1 className="intro__text">Hi. I'm Jamie.</h1>
