@@ -39,7 +39,7 @@ const Brands = () => {
           <span className="brands__current-label">Currently Gear-Sponsored By</span>
           <img
             className="brands__current-logo"
-            src={require('../../images/Outerknown-Logo-1.png')}
+            src={require('../../images/Outerknown-Logos-01.png')}
             alt="Outerknown"
           />
         </div>
