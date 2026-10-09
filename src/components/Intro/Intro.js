@@ -1,7 +1,6 @@
 // Intro.js
 
 import './Intro.scss'
-import { Link } from 'react-scroll';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
@@ -11,36 +10,44 @@ gsap.registerPlugin(ScrollTrigger);
 const Intro = () => {
 
   useLayoutEffect(() => {
-    gsap.fromTo(".intro__container", {
+    gsap.fromTo(".intro__name", {
       opacity: 0,
+      y: 20,
     },
     {
-      opacity: .8,
+      opacity: 1,
+      y: 0,
       duration: 1,
       delay: .5,
-      ease: "power3",
+      ease: "power2.out",
     })
-  
-    gsap.fromTo(".intro__text-container", {
+
+    gsap.fromTo(".intro__tagline", {
       opacity: 0,
     },
     {
       opacity: 1,
-      duration: 2,
+      duration: 1,
       delay: 1,
-      ease: "power2",
+      ease: "power2.out",
     })
   }, [])
 
   return (
     <div className="intro" id="intro">
-      <div className="intro__container">
-        <div className="intro__text-container">
-          <h1 className="intro__text">Hi. I'm Jamie.</h1>
-          <h1>A Creative.</h1>
-          <p>I am also a software developer who crafts captivating UIs. I blend my love for photography and the wilderness to inspire innovative designs.</p>
-          <Link to="about" spy={true} smooth={true} offset={0} duration={1000}><button className="intro__button">View More</button></Link>
-        </div>
+      <video
+        className="intro__video"
+        src="/videos/hero-reel.mp4"
+        poster={require('../../images/background.jpg')}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+      <div className="intro__overlay" />
+      <div className="intro__text-container">
+        <h1 className="intro__name">Jamie Caudill</h1>
+        <p className="intro__tagline">Digital Media</p>
       </div>
     </div>
   )
