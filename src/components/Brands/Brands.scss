@@ -1,0 +1,91 @@
+/* Brands.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+.brands {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1a17;
+  color: #f5f1ea;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+}
+
+.brands__content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.brands__kicker {
+  margin: 0 0 .5rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #b7ab93;
+}
+
+.brands__title {
+  margin: 0 0 1.25rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.brands__text {
+  margin: 0 0 1.75rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #e3ddd1;
+}
+
+.brands__current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .85rem;
+  margin: 0 0 2.5rem;
+}
+
+.brands__current-label {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: #b7ab93;
+}
+
+.brands__current-logo {
+  height: 48px;
+  width: auto;
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+.brands__cta {
+  padding: .6rem 1.5rem;
+  border: 1px solid #f5f1ea;
+  border-radius: 5px;
+  color: #f5f1ea;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1rem;
+  letter-spacing: .05em;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.brands__cta:hover {
+  background-color: #f5f1ea;
+  color: #1c1a17;
+}
+
+@media screen and (max-width: 550px) {
+  .brands__title {
+    font-size: 2.25rem;
+  }
+}

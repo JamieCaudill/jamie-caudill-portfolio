@@ -4,6 +4,7 @@ import React from 'react';
 import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
 import Packages from './components/Packages/Packages';
+import Brands from './components/Brands/Brands';
 import Contact from './components/Contact/Contact';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Portfolio />
       <Packages />
+      <Brands />
       <Contact />
     </main>
   );
