@@ -38,7 +38,7 @@ const Packages = () => {
         <p className="packages__subtext">Content in exchange for a stay — pick the tier that fits.</p>
       </div>
 
-      <div className="packages__cards">
+      <div className={`packages__cards${packagesData.length === 1 ? " is-single" : ""}`}>
         {packagesData.map((tier) => (
           <div className={`packages__card${tier.featured ? " is-featured" : ""}`} key={tier.id}>
             {tier.featured && <span className="packages__card-tag">Full Package</span>}

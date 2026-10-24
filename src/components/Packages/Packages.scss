@@ -53,6 +53,10 @@
   margin-bottom: 3rem;
 }
 
+.packages__cards.is-single {
+  max-width: 420px;
+}
+
 .packages__card {
   position: relative;
   flex: 1;
