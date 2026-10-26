@@ -1,10 +1,10 @@
 const sponsorshipPitches = [
   {
     slug: "australia",
-    destination: "[DESTINATION]",
-    dates: "[DATES]",
-    storyAngle: "[STORY ANGLE]",
-    heroImage: require('../images/DSC04162.jpg'),
+    destination: "Australia",
+    dates: "December 2026",
+    storyAngle: "A vintage-inspired surf road trip — chasing empty coastline from an old Casita trailer",
+    heroImage: require('../images/australia-trip/sunset-waves.jpg'),
     audience: {
       followers: "[FOLLOWER COUNT]",
       platform: "[PRIMARY PLATFORM]",

@@ -12,10 +12,10 @@ import aboutMe from '../../data/about-me';
 gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
-  { label: "Photography", image: require('../../images/DSC08665.jpg') },
-  { label: "Travel", image: require('../../images/DSC_0275.jpg') },
-  { label: "Storytelling", image: require('../../images/DSC09428.jpg') },
-  { label: "Documentation", image: require('../../images/DSC00696.jpg') },
+  { label: "On the Road", image: require('../../images/australia-trip/trailer-truck-forest.jpg') },
+  { label: "In the Water", image: require('../../images/australia-trip/wave-silhouette.jpg') },
+  { label: "Slow Mornings", image: require('../../images/australia-trip/journaling.jpg') },
+  { label: "Camp Life", image: require('../../images/australia-trip/campsite-setup.jpg') },
 ]
 
 const deliverables = [
@@ -113,7 +113,7 @@ const SponsorshipPitch = () => {
       <div className="pitch__section pitch__about">
         <div className="pitch__about-container">
           <div className="pitch__animate pitch__about-image">
-            <img src={require('../../images/DSC00465.jpg')} alt="Jamie Caudill" />
+            <img src={require('../../images/australia-trip/golden-hour-portrait.jpg')} alt="Jamie Caudill" />
           </div>
           <div className="pitch__about-text">
             <p className="pitch__kicker">Creator</p>
@@ -167,8 +167,8 @@ const SponsorshipPitch = () => {
             ))}
           </ul>
         </div>
-        <div className="pitch__animate pitch__adventure-image">
-          <img src={require('../../images/DSC07147.jpg')} alt="" />
+        <div className="pitch__animate pitch__adventure-poster">
+          <img src={require('../../images/australia-trip/vintage-surf-poster-coral.png')} alt="Jamie's Vintage Surf Road Trip poster" />
         </div>
       </div>
 
@@ -238,6 +238,9 @@ const SponsorshipPitch = () => {
       </div>
 
       <div className="pitch__section pitch__cta">
+        <div className="pitch__animate pitch__cta-sticker">
+          <img src={require('../../images/australia-trip/vintage-surf-poster-cream.png')} alt="" />
+        </div>
         <div className="pitch__animate pitch__cta-content">
           <p className="pitch__kicker">Let's Go</p>
           <h2 className="pitch__title">Let's Adventure Together</h2>
