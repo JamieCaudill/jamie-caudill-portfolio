@@ -1,0 +1,572 @@
+/* SponsorshipPitch.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pitch {
+  width: 100%;
+}
+
+.pitch__section {
+  width: 100%;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pitch__kicker {
+  margin: 0 0 .5rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #7a6f5d;
+  text-align: center;
+}
+
+.pitch__title {
+  margin: 0 0 .75rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.pitch__about,
+.pitch__adventure,
+.pitch__deliverables,
+.pitch__cta {
+  background-color: #f7f3ec;
+  color: #2b2b2b;
+}
+
+.pitch__audience,
+.pitch__numbers,
+.pitch__partnership {
+  background-color: #1c1a17;
+  color: #f5f1ea;
+}
+
+.pitch__audience .pitch__kicker,
+.pitch__numbers .pitch__kicker,
+.pitch__partnership .pitch__kicker {
+  color: #b7ab93;
+}
+
+/* ---------- Hero ---------- */
+
+.pitch__hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.pitch__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.pitch__hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.pitch__hero-kicker {
+  margin: 0 0 1.5rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.pitch__hero-title {
+  margin: 0 0 1.25rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.pitch__hero-subtitle {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  opacity: .95;
+}
+
+/* ---------- That's Me ---------- */
+
+.pitch__about-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.pitch__about-image {
+  flex: 0 0 36%;
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.pitch__about-text {
+  flex: 1;
+}
+
+.pitch__about-text .pitch__kicker,
+.pitch__about-text .pitch__title {
+  text-align: left;
+}
+
+.pitch__about-bio {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #3a3a3a;
+}
+
+.pitch__pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.pitch__pillar {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.pitch__pillar-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .75rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  color: #fff;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: .05em;
+  text-align: center;
+}
+
+/* ---------- Audience ---------- */
+
+.pitch__audience-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.pitch__audience-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pitch__audience-stat-value {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.pitch__audience-stat-label {
+  margin-top: .4rem;
+  font-size: .8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b7ab93;
+}
+
+.pitch__audience-proof {
+  max-width: 500px;
+  padding: 1.5rem;
+  border: 1px dashed rgba(245, 241, 234, 0.4);
+  border-radius: 4px;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: center;
+  color: #e3ddd1;
+}
+
+/* ---------- The Adventure ---------- */
+
+.pitch__adventure {
+  flex-direction: row;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pitch__adventure-text {
+  flex: 1;
+}
+
+.pitch__adventure-text .pitch__kicker,
+.pitch__adventure-text .pitch__title {
+  text-align: left;
+}
+
+.pitch__adventure-subtitle {
+  margin: 0 0 1.5rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #3a3a3a;
+}
+
+.pitch__adventure-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 1.1rem;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #3a3a3a;
+
+    &::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #7a6f5d;
+    }
+  }
+}
+
+.pitch__adventure-image {
+  flex: 0 0 38%;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ---------- Content in Numbers ---------- */
+
+.pitch__numbers-grid {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pitch__numbers-tile {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: rgba(245, 241, 234, 0.05);
+  border: 1px solid rgba(245, 241, 234, 0.15);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.pitch__numbers-tile.is-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border-style: dashed;
+}
+
+.pitch__numbers-tile-info {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.pitch__numbers-tile-title {
+  display: block;
+  margin-bottom: .4rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #b7ab93;
+}
+
+.pitch__numbers-tile-value {
+  display: block;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+/* ---------- What's Inside for You ---------- */
+
+.pitch__deliverables-grid {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.pitch__deliverables-card {
+  flex: 1;
+  padding: 2rem;
+  border: 1px solid rgba(43, 43, 43, 0.15);
+  border-radius: 4px;
+
+  h3 {
+    margin: 0 0 .75rem;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+
+  p {
+    margin: 0;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #3a3a3a;
+  }
+}
+
+/* ---------- Partnership / The Ask ---------- */
+
+.pitch__partnership-text {
+  max-width: 600px;
+  margin: 0 0 3rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #e3ddd1;
+}
+
+.pitch__partnership-partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: 3.5rem;
+}
+
+.pitch__partnership-partners-label {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: #b7ab93;
+}
+
+.pitch__partnership-partners-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  img {
+    height: 44px;
+    width: auto;
+    opacity: .9;
+
+    &.is-inverted {
+      filter: invert(1);
+    }
+  }
+}
+
+.pitch__partnership-asks {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.pitch__partnership-ask {
+  flex: 1;
+  padding: 2rem;
+  border: 1px solid rgba(245, 241, 234, 0.2);
+  border-radius: 4px;
+
+  h3 {
+    margin: 0 0 .75rem;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin: 0;
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #e3ddd1;
+  }
+}
+
+.pitch__partnership-fallback {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #b7ab93;
+}
+
+/* ---------- Closing CTA ---------- */
+
+.pitch__cta {
+  min-height: 60vh;
+  justify-content: center;
+}
+
+.pitch__cta-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.pitch__cta-subtext {
+  margin: 0 0 2.5rem;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.25rem;
+  color: #3a3a3a;
+}
+
+.pitch__cta-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.pitch__cta-link {
+  position: relative;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2b2b2b;
+  text-decoration: none;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease-in-out;
+}
+
+.pitch__cta-link:hover {
+  border-color: #2b2b2b;
+}
+
+/* ---------- Not found ---------- */
+
+.pitch--not-found {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 1.5rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 900px) {
+  .pitch__about-container,
+  .pitch__adventure {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .pitch__about-image,
+  .pitch__adventure-image {
+    flex: 0 0 auto;
+    max-width: 320px;
+  }
+
+  .pitch__about-text .pitch__kicker,
+  .pitch__about-text .pitch__title,
+  .pitch__adventure-text .pitch__kicker,
+  .pitch__adventure-text .pitch__title {
+    text-align: center;
+  }
+
+  .pitch__pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pitch__deliverables-grid,
+  .pitch__partnership-asks {
+    flex-direction: column;
+  }
+
+  .pitch__title {
+    font-size: 2.25rem;
+  }
+
+  .pitch__hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pitch__cta-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
