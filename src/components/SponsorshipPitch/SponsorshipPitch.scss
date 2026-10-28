@@ -17,7 +17,8 @@ html {
 }
 
 .pitch {
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
 }
 
 .pitch__section {
@@ -51,14 +52,15 @@ html {
   text-align: center;
 }
 
-.pitch__about,
 .pitch__adventure,
 .pitch__deliverables,
-.pitch__cta {
+.pitch__cta,
+.pitch__tone {
   background-color: $sandbar;
   color: $ink;
 }
 
+.pitch__about,
 .pitch__audience,
 .pitch__numbers,
 .pitch__partnership {
@@ -66,6 +68,7 @@ html {
   color: $cream-text;
 }
 
+.pitch__about .pitch__kicker,
 .pitch__audience .pitch__kicker,
 .pitch__numbers .pitch__kicker,
 .pitch__partnership .pitch__kicker {
@@ -91,7 +94,7 @@ html {
 .pitch__hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(62, 32, 20, 0.25) 0%, rgba(62, 32, 20, 0.75) 100%);
+  background: linear-gradient(180deg, rgba($coral, 0.25) 0%, rgba($coral, 0.75) 100%);
 }
 
 .pitch__hero-content {
@@ -143,16 +146,13 @@ html {
   margin-bottom: 4rem;
 }
 
-.pitch__about-image {
+.pitch__about-photo {
   flex: 0 0 34%;
-  background-color: #fff;
-  padding: .75rem .75rem 2rem;
-  box-shadow: 0 14px 30px rgba(62, 32, 20, 0.25);
-  transform: rotate(-2deg);
 
   img {
     width: 100%;
     display: block;
+    border-radius: 4px;
   }
 }
 
@@ -170,49 +170,145 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.65;
-  color: $ink;
+  color: $cream-text;
 }
 
-.pitch__pillars {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+.pitch__pillars,
+.pitch__tone-tiles {
   max-width: 1100px;
   width: 100%;
+  padding: 0 2.75rem;
+  box-sizing: border-box;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background: none;
+    transition: opacity .2s ease-in-out;
+
+    &::after {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &.swiper-button-disabled {
+      opacity: .3;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
+.pitch__pillars .swiper-button-next,
+.pitch__pillars .swiper-button-prev {
+  color: $cream-text;
+}
+
+.pitch__tone-tiles .swiper-button-next,
+.pitch__tone-tiles .swiper-button-prev {
+  color: $coral;
 }
 
 .pitch__pillar {
-  background-color: #fff;
-  padding: .6rem .6rem 1.1rem;
-  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.2);
-  transform: rotate(-3deg);
-
-  &:nth-child(2n) {
-    transform: rotate(2deg);
-  }
-
-  &:nth-child(3n) {
-    transform: rotate(-1.5deg);
-  }
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
 
   img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 2 / 3;
     object-fit: cover;
     display: block;
   }
 }
 
 .pitch__pillar-label {
-  display: block;
-  margin-top: .75rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .75rem;
+  background: linear-gradient(180deg, rgba(62, 32, 20, 0) 0%, rgba(62, 32, 20, 0.75) 100%);
+  color: $cream-text;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: .8rem;
+  font-size: .75rem;
   letter-spacing: .08em;
   text-transform: uppercase;
   text-align: center;
-  color: $ink;
+}
+
+/* ---------- Color Palette & Tone ---------- */
+
+.pitch__tone-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.pitch__tone-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+}
+
+.pitch__tone-swatch-color {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(62, 32, 20, 0.2);
+}
+
+.pitch__tone-swatch-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: $driftwood;
+}
+
+.pitch__tone-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.pitch__tone-tile-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .75rem;
+  background: linear-gradient(180deg, rgba(62, 32, 20, 0) 0%, rgba(62, 32, 20, 0.75) 100%);
+  color: $cream-text;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* ---------- Audience ---------- */
@@ -258,23 +354,27 @@ html {
 }
 
 .pitch__audience-proof {
-  max-width: 500px;
-  padding: 1.5rem;
-  border: 1px dashed rgba(253, 243, 224, 0.4);
+  max-width: 420px;
+  width: 100%;
+  background-color: #fff;
   border-radius: 4px;
-  font-family: 'Inter', sans-serif;
-  font-style: italic;
-  font-size: .95rem;
-  text-align: center;
-  color: rgba(253, 243, 224, 0.85);
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.25);
+
+  img {
+    width: 100%;
+    display: block;
+  }
 }
 
 /* ---------- The Adventure ---------- */
 
-.pitch__adventure {
+.pitch__adventure-container {
+  display: flex;
   flex-direction: row;
   gap: 5rem;
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -293,6 +393,14 @@ html {
   font-style: italic;
   font-size: 1.05rem;
   color: $driftwood;
+}
+
+.pitch__adventure-description {
+  margin: 0 0 1.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: $ink;
 }
 
 .pitch__adventure-list {
@@ -355,16 +463,6 @@ html {
   }
 }
 
-.pitch__numbers-tile.is-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
-  background-color: transparent;
-  border: 1px dashed rgba(253, 243, 224, 0.4);
-  box-shadow: none;
-}
-
 .pitch__numbers-tile-info {
   padding: 1.25rem;
   text-align: center;
@@ -379,10 +477,6 @@ html {
   color: $driftwood;
 }
 
-.is-placeholder .pitch__numbers-tile-title {
-  color: rgba(253, 243, 224, 0.75);
-}
-
 .pitch__numbers-tile-value {
   display: block;
   font-family: 'Anton', 'Inter', sans-serif;
@@ -390,10 +484,6 @@ html {
   text-transform: uppercase;
   font-size: 1.5rem;
   color: $ink;
-}
-
-.is-placeholder .pitch__numbers-tile-value {
-  color: $sandbar;
 }
 
 /* ---------- What's Inside for You ---------- */
@@ -465,16 +555,13 @@ html {
   justify-content: center;
   gap: 2rem;
   background-color: $sandbar;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 999px;
 
   img {
     height: 40px;
     width: auto;
     opacity: .9;
-
-    &.is-inverted {
-      filter: invert(1);
-    }
   }
 }
 
@@ -596,12 +683,12 @@ html {
 
 @media screen and (max-width: 900px) {
   .pitch__about-container,
-  .pitch__adventure {
+  .pitch__adventure-container {
     flex-direction: column;
     gap: 2.5rem;
   }
 
-  .pitch__about-image,
+  .pitch__about-photo,
   .pitch__adventure-poster {
     flex: 0 0 auto;
     max-width: 300px;
@@ -612,10 +699,6 @@ html {
   .pitch__adventure-text .pitch__kicker,
   .pitch__adventure-text .pitch__title {
     text-align: center;
-  }
-
-  .pitch__pillars {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .pitch__deliverables-grid,
@@ -646,5 +729,21 @@ html {
   .pitch__audience-stat {
     width: 130px;
     height: 130px;
+  }
+
+  .pitch__pillars,
+  .pitch__tone-tiles {
+    padding: 0 1.75rem;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 18px;
+      height: 18px;
+      margin-top: -9px;
+
+      &::after {
+        font-size: .9rem;
+      }
+    }
   }
 }

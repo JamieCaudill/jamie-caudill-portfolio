@@ -1,10 +1,14 @@
 // SponsorshipPitch.js //
 
 import './SponsorshipPitch.scss';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import { useParams } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
 import sponsorshipPitches from '../../data/sponsorship-pitches';
 import portfolioData from '../../data/portfolio-data';
 import aboutMe from '../../data/about-me';
@@ -12,10 +16,30 @@ import aboutMe from '../../data/about-me';
 gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
-  { label: "On the Road", image: require('../../images/australia-trip/trailer-truck-forest.jpg') },
-  { label: "In the Water", image: require('../../images/australia-trip/wave-silhouette.jpg') },
+  { label: "Photographer", image: require('../../images/australia-trip/camera-in-hand.jpg') },
+  { label: "Filmmaker", image: require('../../images/australia-trip/wave-crash-silhouette.jpg') },
+  { label: "Adventurer", image: require('../../images/australia-trip/rock-climbing.jpg') },
+  { label: "Outdoor Professional", image: require('../../images/australia-trip/powder-skiing.jpg') },
+  { label: "Writer", image: require('../../images/australia-trip/writer-laptop.jpg') },
+]
+
+const tones = [
   { label: "Slow Mornings", image: require('../../images/australia-trip/journaling.jpg') },
+  { label: "Surf", image: require('../../images/australia-trip/surf-carve.jpg') },
   { label: "Camp Life", image: require('../../images/australia-trip/campsite-setup.jpg') },
+  { label: "Philosophizing", image: require('../../images/australia-trip/portrait-coffee.jpg') },
+  { label: "Mindfulness", image: require('../../images/australia-trip/meditation.jpg') },
+  { label: "On the Road", image: require('../../images/australia-trip/trailer-truck-forest.jpg') },
+  { label: "Sustainability", image: require('../../images/IMG_9538.JPG') },
+]
+
+const palette = [
+  { label: "Sandbar", hex: "#FEE0BA" },
+  { label: "Amber", hex: "#F3C28A" },
+  { label: "Lagoon", hex: "#95C9BC" },
+  { label: "Sunset", hex: "#DB9967" },
+  { label: "Driftwood", hex: "#A77A5D" },
+  { label: "Coral", hex: "#CB603E" },
 ]
 
 const deliverables = [
@@ -112,8 +136,8 @@ const SponsorshipPitch = () => {
 
       <div className="pitch__section pitch__about">
         <div className="pitch__about-container">
-          <div className="pitch__animate pitch__about-image">
-            <img src={require('../../images/australia-trip/golden-hour-portrait.jpg')} alt="Jamie Caudill" />
+          <div className="pitch__animate pitch__about-photo">
+            <img src={require('../../images/australia-trip/paddle-out-smile.jpg')} alt="Jamie Caudill" />
           </div>
           <div className="pitch__about-text">
             <p className="pitch__kicker">Creator</p>
@@ -122,14 +146,63 @@ const SponsorshipPitch = () => {
           </div>
         </div>
 
-        <div className="pitch__pillars">
+        <Swiper
+          className="pitch__pillars"
+          modules={[Autoplay, Navigation]}
+          spaceBetween={24}
+          slidesPerView={4}
+          loop={true}
+          navigation={true}
+          autoplay={{ delay: 2800, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          breakpoints={{
+            0: { slidesPerView: 2 },
+            640: { slidesPerView: 3 },
+            900: { slidesPerView: 4 },
+          }}
+        >
           {pillars.map((pillar) => (
-            <div className="pitch__animate pitch__pillar" key={pillar.label}>
+            <SwiperSlide className="pitch__pillar" key={pillar.label}>
               <img src={pillar.image} alt={pillar.label} />
               <span className="pitch__pillar-label">{pillar.label}</span>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="pitch__section pitch__tone">
+        <p className="pitch__kicker">Vintage Surf</p>
+        <h2 className="pitch__title">Color Palette &amp; Tone</h2>
+
+        <div className="pitch__tone-swatches">
+          {palette.map((color) => (
+            <div className="pitch__animate pitch__tone-swatch" key={color.label}>
+              <span className="pitch__tone-swatch-color" style={{ backgroundColor: color.hex }} />
+              <span className="pitch__tone-swatch-label">{color.label}</span>
             </div>
           ))}
         </div>
+
+        <Swiper
+          className="pitch__tone-tiles"
+          modules={[Autoplay, Navigation]}
+          spaceBetween={24}
+          slidesPerView={4}
+          loop={true}
+          navigation={true}
+          autoplay={{ delay: 2800, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          breakpoints={{
+            0: { slidesPerView: 2 },
+            640: { slidesPerView: 3 },
+            900: { slidesPerView: 4 },
+          }}
+        >
+          {tones.map((tone) => (
+            <SwiperSlide className="pitch__tone-tile" key={tone.label}>
+              <img src={tone.image} alt={tone.label} />
+              <span className="pitch__tone-tile-label">{tone.label}</span>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className="pitch__section pitch__audience">
@@ -152,23 +225,26 @@ const SponsorshipPitch = () => {
         </div>
 
         <div className="pitch__animate pitch__audience-proof">
-          Drop in a current analytics screenshot here before sending.
+          <img src={require('../../images/instagram-insights.png')} alt="Instagram insights for @jam.caudill, Sep 27 - Oct 27, 2026" />
         </div>
       </div>
 
       <div className="pitch__section pitch__adventure">
-        <div className="pitch__adventure-text">
-          <p className="pitch__kicker">The Adventure</p>
-          <h2 className="pitch__title">{pitch.destination}</h2>
-          <p className="pitch__adventure-subtitle">{pitch.dates} — {pitch.storyAngle}</p>
-          <ul className="pitch__adventure-list">
-            {pitch.contentFormats.map((format) => (
-              <li key={format}>{format}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="pitch__animate pitch__adventure-poster">
-          <img src={require('../../images/australia-trip/vintage-surf-poster-coral.png')} alt="Jamie's Vintage Surf Road Trip poster" />
+        <div className="pitch__adventure-container">
+          <div className="pitch__adventure-text">
+            <p className="pitch__kicker">The Adventure</p>
+            <h2 className="pitch__title">{pitch.destination}</h2>
+            <p className="pitch__adventure-subtitle">{pitch.dates} — {pitch.storyAngle}</p>
+            <p className="pitch__adventure-description">{pitch.story}</p>
+            <ul className="pitch__adventure-list">
+              {pitch.contentFormats.map((format) => (
+                <li key={format}>{format}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="pitch__animate pitch__adventure-poster">
+            <img src={require('../../images/australia-trip/vintage-surf-poster-coral.png')} alt="Jamie's Vintage Surf Road Trip poster" />
+          </div>
         </div>
       </div>
 
@@ -186,12 +262,6 @@ const SponsorshipPitch = () => {
               </div>
             </div>
           ))}
-          <div className="pitch__animate pitch__numbers-tile is-placeholder">
-            <div className="pitch__numbers-tile-info">
-              <span className="pitch__numbers-tile-title">[PLATFORM]</span>
-              <span className="pitch__numbers-tile-value">[METRIC]</span>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -220,8 +290,8 @@ const SponsorshipPitch = () => {
         <div className="pitch__animate pitch__partnership-partners">
           <span className="pitch__partnership-partners-label">Past &amp; Current Partners</span>
           <div className="pitch__partnership-partners-logos">
-            <img className="is-inverted" src={require('../../images/Outerknown-Logos-01.png')} alt="Outerknown" />
-            <img className="is-inverted" src={require('../../images/SF-Horizontal-Logo_RGB_Black_crop_small.webp')} alt="Surfrider Foundation" />
+            <img src={require('../../images/Outerknown-Logos-01.png')} alt="Outerknown" />
+            <img src={require('../../images/SF-Horizontal-Logo_RGB_Black_crop_small.webp')} alt="Surfrider Foundation" />
             <img src={require('../../images/DSCC_20_logo_blue_SocMedia_website_circle-1.svg').default} alt="Deep Sea Conserve" />
           </div>
         </div>

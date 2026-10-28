@@ -13,7 +13,7 @@ const portfolioData = [
       require('../images/IMG_6137.jpg'),
     ],
     metrics: [
-      { label: "Views", value: "12.2K" },
+      { label: "Views", value: "13K" },
       { label: "Likes", value: "597" },
       { label: "Comments", value: "57" },
       { label: "Reposts", value: "16" },
