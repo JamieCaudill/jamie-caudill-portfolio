@@ -1,5 +1,102 @@
 # Changelog
 
+## 2026-10-28
+
+### Switched sponsorship pitch carousels to Swiper, fixed a mobile overflow bug, filled in real content
+
+Replaced the hand-rolled `overflow-x: auto` scroll track for the pillars section with
+the `swiper` library (added as a dependency), reused the same pattern for the new
+Color Palette & Tone section's tone tiles, and added manual prev/next arrows to both
+on top of the existing autoplay.
+
+`src/components/SponsorshipPitch/SponsorshipPitch.js:149-169`
+```jsx
+<Swiper
+  className="pitch__pillars"
+  modules={[Autoplay, Navigation]}
+  spaceBetween={24}
+  slidesPerView={4}
+  loop={true}
+  navigation={true}
+  autoplay={{ delay: 2800, disableOnInteraction: false, pauseOnMouseEnter: true }}
+  breakpoints={{
+    0: { slidesPerView: 2 },
+    640: { slidesPerView: 3 },
+    900: { slidesPerView: 4 },
+  }}
+>
+  {pillars.map((pillar) => (
+    <SwiperSlide className="pitch__pillar" key={pillar.label}>
+      <img src={pillar.image} alt={pillar.label} />
+      <span className="pitch__pillar-label">{pillar.label}</span>
+    </SwiperSlide>
+  ))}
+</Swiper>
+```
+
+The nav arrows are bare chevrons (no circle/background) positioned outside the
+carousel images rather than overlapping them, colored per section for contrast —
+cream on the coral pillars section, coral on the cream tone-tiles section.
+
+`src/components/SponsorshipPitch/SponsorshipPitch.scss:176-208`
+```scss
+.pitch__pillars,
+.pitch__tone-tiles {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 2.75rem;
+  box-sizing: border-box;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background: none;
+    transition: opacity .2s ease-in-out;
+
+    &::after {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &.swiper-button-disabled {
+      opacity: .3;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+```
+
+Bug caught while testing mobile widths: `html`'s sitewide `display: flex;
+justify-content: center;` pattern (`src/App.scss`) means a child's width is
+shrink-to-fit rather than pinned to the viewport. That's normally invisible, but the
+pillars carousel's real content is wider than the screen, and its unclamped width
+bubbled all the way up through `.pitch__about` to `.pitch`, blowing the whole page out
+to ~748px on a 390px phone (confirmed directly via `body.scrollWidth`). Fixed by
+anchoring `.pitch` to the real viewport instead of a percentage of a shrink-to-fit
+ancestor.
+
+`src/components/SponsorshipPitch/SponsorshipPitch.scss:19-22`
+```scss
+.pitch {
+  width: 100vw;
+  max-width: 100vw;
+}
+```
+
+Also filled in real audience numbers and an Instagram insights screenshot (replacing
+the `[FOLLOWER COUNT]` / `[REACH]` placeholders and the "drop in a screenshot" note
+from the previous entry), added an adventure-section story paragraph, and swapped in
+final trip photos for the About/pillars/tone sections.
+
 ## 2026-10-26
 
 ### Added a brand sponsorship pitch page at /sponsorship/:slug
