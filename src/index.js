@@ -5,6 +5,7 @@ import './index.scss';
 import App from './App';
 import SponsorshipPitch from './components/SponsorshipPitch/SponsorshipPitch';
 import SurfriderPitch from './components/SurfriderPitch/SurfriderPitch';
+import OuterknownPitch from './components/OuterknownPitch/OuterknownPitch';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/sponsorship/:slug" element={<SponsorshipPitch />} />
         <Route path="/sponsorship/surfrider-foundation" element={<SurfriderPitch />} />
+        <Route path="/sponsorship/outerknown" element={<OuterknownPitch />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
