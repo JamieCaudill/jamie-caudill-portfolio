@@ -60,7 +60,7 @@ const deliverables = [
 const asks = [
   {
     title: "Gear & Product",
-    description: "Outfit the trip — product provided in exchange for featured content.",
+    description: "Outfit the trip.",
   },
   {
     title: "Paid Sponsorship",
@@ -288,11 +288,16 @@ const SponsorshipPitch = () => {
         </p>
 
         <div className="pitch__animate pitch__partnership-partners">
-          <span className="pitch__partnership-partners-label">Past &amp; Current Partners</span>
-          <div className="pitch__partnership-partners-logos">
-            <img src={require('../../images/Outerknown-Logos-01.png')} alt="Outerknown" />
-            <img src={require('../../images/SF-Horizontal-Logo_RGB_Black_crop_small.webp')} alt="Surfrider Foundation" />
-            <img src={require('../../images/DSCC_20_logo_blue_SocMedia_website_circle-1.svg').default} alt="Deep Sea Conserve" />
+          <div className="pitch__partnership-proof">
+            <img src={require('../../images/surfrider-portrait.jpg')} alt="Jamie Caudill wearing a Surfrider Foundation shirt" />
+          </div>
+          <div className="pitch__partnership-partners-info">
+            <span className="pitch__partnership-partners-label">Past &amp; Current Collaborations</span>
+            <div className="pitch__partnership-partners-logos">
+              <img src={require('../../images/Outerknown-Logos-01.png')} alt="Outerknown" />
+              <img src={require('../../images/SF-Horizontal-Logo_RGB_Black_crop_small.webp')} alt="Surfrider Foundation" />
+              <img src={require('../../images/DSCC_20_logo_blue_SocMedia_website_circle-1.svg').default} alt="Deep Sea Conserve" />
+            </div>
           </div>
         </div>
 

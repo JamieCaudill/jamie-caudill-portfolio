@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import SponsorshipPitch from './components/SponsorshipPitch/SponsorshipPitch';
+import SurfriderPitch from './components/SurfriderPitch/SurfriderPitch';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/sponsorship/:slug" element={<SponsorshipPitch />} />
+        <Route path="/sponsorship/surfrider-foundation" element={<SurfriderPitch />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
