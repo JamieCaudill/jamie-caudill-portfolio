@@ -1,5 +1,84 @@
 # Changelog
 
+## 2026-10-29
+
+### Added a direct sponsorship pitch page for Surfrider Foundation
+
+New route at `/sponsorship/surfrider-foundation`, forked from the generic
+`SponsorshipPitch` template into its own `SurfriderPitch` component/stylesheet/data
+file so copy, palette, and section order could diverge freely without touching the
+other pitch page.
+
+`src/index.js:7,17`
+```jsx
+import SurfriderPitch from './components/SurfriderPitch/SurfriderPitch';
+...
+<Route path="/sponsorship/surfrider-foundation" element={<SurfriderPitch />} />
+```
+
+The mission copy was reframed from a single feature-length documentary into an
+episodic format — one nonprofit per episode, tied together by the end — with the
+same format continuing into a New Zealand leg right after Australia.
+
+`src/data/surfrider-pitch.js:8`
+```js
+"... Rather than one feature-length film, I'm structuring it as a series — three to
+four episodes, each centered on a different nonprofit — and tying them together into
+a single throughline by the end. Told through the lens of surfing and waterpeople.",
+```
+
+The "Our History" section's past-collaboration case studies can now show either a
+single static cover image or an auto-rotating Swiper of photos — used for the new
+Outdoor Alliance × Surfrider Ocean Beach photoshoot (7 photos, no manual arrows, just
+autoplay) alongside the existing Paddle Out for #DefendTheDeep card.
+
+`src/components/SurfriderPitch/SurfriderPitch.js:285-297`
+```jsx
+{collab.photos ? (
+  <Swiper
+    className="surfrider-pitch__case-study-image surfrider-pitch__case-study-swiper"
+    modules={[Autoplay]}
+    loop={true}
+    autoplay={{ delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true }}
+  >
+    {collab.photos.map((photo, index) => (
+      <SwiperSlide key={index}>
+        <img src={photo} alt={collab.title} />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+) : (
+  <img className="surfrider-pitch__case-study-image" src={collab.cover} alt={collab.title} />
+)}
+```
+
+Also dropped the "Proof of Work" content-numbers section and the Letter of
+Invitation/visa ask (tourist visa for now, so no longer the thing to lead with),
+reworked the sponsorship asks into Gear & Product / Financial Support / Contacts
+(introductions to local wilderness defenders) under a new "The Ask" heading, linked
+the Maroon Belles mention to its source article, and removed the "Get in touch if you
+would like to collaborate!" line from the shared About Me bio (`src/data/about-me.js`)
+used across all three pitch pages.
+
+Bug caught while reviewing the tone-tile carousel: each tile had a `box-shadow` the
+pillar tiles didn't, and it bled through the Swiper's clip boundary from the
+off-screen looped slide, showing up as a dark smear on the left edge against the
+section's white background.
+
+`src/components/SurfriderPitch/SurfriderPitch.scss:298-302`
+```scss
+.surfrider-pitch__tone-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+}
+```
+
+A few of these polish passes (trimmed ask copy, "Collaborations" wording, a Swiper
+gutter-padding fix so looped slides don't peek into the nav-arrow gutter) were carried
+back to the generic `SponsorshipPitch` page as well.
+
 ## 2026-10-28
 
 ### Switched sponsorship pitch carousels to Swiper, fixed a mobile overflow bug, filled in real content
