@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="contact__links">
           <a className="contact__link" href="mailto:j.caudill7177@gmail.com">Email</a>
           <a className="contact__link" href="https://www.instagram.com/jam.caudill/" target="_blank" rel="noreferrer">Instagram</a>
-          <a className="contact__link" href="https://wa.me/19709489217" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a className="contact__link" href="https://substack.com/@jamcaudill" target="_blank" rel="noreferrer">Substack</a>
         </div>
       </div>
     </div>
