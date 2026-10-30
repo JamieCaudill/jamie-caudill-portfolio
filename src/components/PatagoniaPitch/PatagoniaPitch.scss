@@ -1,0 +1,907 @@
+/* PatagoniaPitch.scss */
+/* Forked from SurfriderPitch.scss — class prefix renamed to `patagonia-pitch` so */
+/* this page's styles can't collide with the other pitch pages' (all stylesheets */
+/* end up in the same bundle regardless of route). */
+/* Palette is kept as-is for now, matching the other pitch pages. */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+$blue: #B4CDDD;
+$charcoal: #25272B;
+$white: #FFFFFF;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.patagonia-pitch {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.patagonia-pitch__section {
+  width: 100%;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patagonia-pitch__kicker {
+  margin: 0 0 .6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba($charcoal, 0.65);
+  text-align: center;
+}
+
+.patagonia-pitch__title {
+  margin: 0 0 1rem;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 3rem;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.patagonia-pitch__adventure,
+.patagonia-pitch__cta,
+.patagonia-pitch__tone {
+  background-color: $white;
+  color: $charcoal;
+}
+
+.patagonia-pitch__about,
+.patagonia-pitch__audience,
+.patagonia-pitch__numbers,
+.patagonia-pitch__partnership {
+  background-color: $charcoal;
+  color: $white;
+}
+
+.patagonia-pitch__about .patagonia-pitch__kicker,
+.patagonia-pitch__audience .patagonia-pitch__kicker,
+.patagonia-pitch__numbers .patagonia-pitch__kicker,
+.patagonia-pitch__partnership .patagonia-pitch__kicker {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Hero ---------- */
+
+.patagonia-pitch__hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.patagonia-pitch__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba($charcoal, 0.3) 0%, rgba($charcoal, 0.8) 100%);
+}
+
+.patagonia-pitch__hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  text-align: center;
+  color: $white;
+  padding: 0 2rem;
+}
+
+.patagonia-pitch__hero-kicker {
+  margin: 0 0 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.patagonia-pitch__hero-project {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: .4rem 1.5rem;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  color: $blue;
+  border-top: 1px solid rgba($white, 0.5);
+  border-bottom: 1px solid rgba($white, 0.5);
+}
+
+.patagonia-pitch__hero-title {
+  margin: 0 0 1.5rem;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: 4rem;
+  line-height: 1.05;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.patagonia-pitch__hero-subtitle {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  opacity: .95;
+}
+
+/* ---------- That's Me ---------- */
+
+.patagonia-pitch__about-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.patagonia-pitch__about-photo {
+  flex: 0 0 34%;
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+  }
+}
+
+.patagonia-pitch__about-text {
+  flex: 1;
+}
+
+.patagonia-pitch__about-text .patagonia-pitch__kicker,
+.patagonia-pitch__about-text .patagonia-pitch__title {
+  text-align: left;
+}
+
+.patagonia-pitch__about-bio {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: $white;
+}
+
+.patagonia-pitch__pillars,
+.patagonia-pitch__tone-tiles {
+  max-width: 1100px;
+  width: 100%;
+  /* Kept under the Swiper spaceBetween (24px): any wider and the looped slide */
+  /* wrapping around peeks into this gutter, since it sits inside the Swiper's */
+  /* own clip box rather than outside it. */
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    background: none;
+    transition: opacity .2s ease-in-out;
+
+    &::after {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    &.swiper-button-disabled {
+      opacity: .3;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
+.patagonia-pitch__pillars .swiper-button-next,
+.patagonia-pitch__pillars .swiper-button-prev {
+  color: $white;
+}
+
+.patagonia-pitch__tone-tiles .swiper-button-next,
+.patagonia-pitch__tone-tiles .swiper-button-prev {
+  color: $charcoal;
+}
+
+.patagonia-pitch__pillar {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.patagonia-pitch__pillar-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .75rem;
+  background: linear-gradient(180deg, rgba($charcoal, 0) 0%, rgba($charcoal, 0.8) 100%);
+  color: $white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ---------- Color Palette & Tone ---------- */
+
+.patagonia-pitch__tone-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.patagonia-pitch__tone-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+}
+
+.patagonia-pitch__tone-swatch-color {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(37, 39, 43, 0.15);
+  box-shadow: 0 6px 16px rgba(37, 39, 43, 0.15);
+}
+
+.patagonia-pitch__tone-swatch-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba($charcoal, 0.65);
+}
+
+.patagonia-pitch__tone-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.patagonia-pitch__tone-tile-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .75rem;
+  background: linear-gradient(180deg, rgba($charcoal, 0) 0%, rgba($charcoal, 0.8) 100%);
+  color: $white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ---------- Audience ---------- */
+
+.patagonia-pitch__audience-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.patagonia-pitch__audience-stat {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.patagonia-pitch__audience-stat-value {
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  color: $blue;
+}
+
+.patagonia-pitch__audience-stat-label {
+  margin-top: .5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: .7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.patagonia-pitch__audience-proof {
+  max-width: 420px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(37, 39, 43, 0.25);
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* ---------- The Mission ---------- */
+
+.patagonia-pitch__adventure-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.patagonia-pitch__adventure-text {
+  flex: 1;
+}
+
+.patagonia-pitch__adventure-text .patagonia-pitch__kicker,
+.patagonia-pitch__adventure-text .patagonia-pitch__title {
+  text-align: left;
+}
+
+.patagonia-pitch__adventure-subtitle {
+  margin: 0 0 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: rgba($charcoal, 0.65);
+}
+
+.patagonia-pitch__adventure-description {
+  margin: 0 0 1.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: $charcoal;
+
+  a {
+    color: $charcoal;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.patagonia-pitch__adventure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 1.25rem 1.5rem;
+    background-color: rgba($charcoal, 0.04);
+    border-top: 3px solid $blue;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $charcoal;
+  }
+}
+
+.patagonia-pitch__adventure-image {
+  flex: 0 0 34%;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 16px 32px rgba(37, 39, 43, 0.3);
+  }
+}
+
+/* ---------- Content in Numbers ---------- */
+
+.patagonia-pitch__numbers-grid {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.patagonia-pitch__numbers-tile {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  background-color: $white;
+  box-shadow: 0 10px 24px rgba(37, 39, 43, 0.2);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.patagonia-pitch__numbers-tile-info {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.patagonia-pitch__numbers-tile-title {
+  display: block;
+  margin-bottom: .4rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: .9rem;
+  color: rgba($charcoal, 0.65);
+}
+
+.patagonia-pitch__numbers-tile-value {
+  display: block;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: $charcoal;
+}
+
+/* ---------- What's Inside for You ---------- */
+
+/* ---------- The Format ---------- */
+
+.patagonia-pitch__format-text {
+  max-width: 700px;
+  margin: 0 0 1.75rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: $charcoal;
+}
+
+.patagonia-pitch__format-quote {
+  max-width: 600px;
+  margin: 0 0 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid rgba($charcoal, 0.3);
+  text-align: left;
+
+  p {
+    margin: 0 0 .5rem;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: $charcoal;
+  }
+
+  cite {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: .85rem;
+    letter-spacing: 0.04em;
+    color: rgba($charcoal, 0.65);
+
+    em {
+      font-style: italic;
+    }
+  }
+}
+
+.patagonia-pitch__format-steps {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.patagonia-pitch__format-step {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba($charcoal, 0.05);
+  border: 1px solid rgba($charcoal, 0.15);
+
+  h3 {
+    margin: 0 0 .75rem;
+    font-family: 'Anton', 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 1.1rem;
+    color: $charcoal;
+  }
+
+  p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+    line-height: 1.5;
+    color: rgba($charcoal, 0.75);
+  }
+}
+
+/* ---------- Our History / The Ask ---------- */
+
+.patagonia-pitch__partnership-text {
+  max-width: 600px;
+  margin: 0 0 3rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+
+  &.is-tight {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.patagonia-pitch__partnership-history {
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+  max-width: 700px;
+  width: 100%;
+
+  li {
+    position: relative;
+    margin-bottom: .85rem;
+    padding-left: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+
+    &::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: $blue;
+    }
+  }
+}
+
+.patagonia-pitch__case-study {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 0 3.5rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.patagonia-pitch__case-study-image {
+  flex: 0 0 34%;
+  width: 34%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.patagonia-pitch__case-study-info {
+  flex: 1;
+}
+
+.patagonia-pitch__case-study-label {
+  display: block;
+  margin-bottom: .5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.patagonia-pitch__case-study-title {
+  margin: 0 0 .5rem;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  color: $white;
+}
+
+.patagonia-pitch__case-study-stat {
+  margin: 0 0 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.patagonia-pitch__case-study-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  img {
+    height: 32px;
+    width: auto;
+
+    &.is-inverted {
+      filter: invert(1);
+    }
+  }
+}
+
+.patagonia-pitch__partnership-partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: 3.5rem;
+}
+
+.patagonia-pitch__partnership-partners-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.patagonia-pitch__partnership-partners-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background-color: $white;
+  padding: 1.5rem 2.5rem;
+  border-radius: 999px;
+
+  img {
+    height: 40px;
+    width: auto;
+    opacity: .9;
+  }
+
+  .patagonia-pitch__partnership-partners-logo--wavesWifi {
+    height: 56px;
+  }
+}
+
+.patagonia-pitch__partnership-asks {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.patagonia-pitch__partnership-ask {
+  flex: 1;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  h3 {
+    margin: 0 0 .75rem;
+    font-family: 'Anton', 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.patagonia-pitch__partnership-fallback {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Closing CTA ---------- */
+
+.patagonia-pitch__cta {
+  min-height: 60vh;
+  justify-content: center;
+}
+
+.patagonia-pitch__cta-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.patagonia-pitch__cta-subtext {
+  margin: 0 0 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  color: $charcoal;
+}
+
+.patagonia-pitch__cta-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.patagonia-pitch__cta-link {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $charcoal;
+  text-decoration: none;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.patagonia-pitch__cta-link:hover {
+  border-color: $blue;
+  color: $blue;
+}
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 900px) {
+  .patagonia-pitch__about-container,
+  .patagonia-pitch__adventure-container,
+  .patagonia-pitch__case-study {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .patagonia-pitch__about-photo,
+  .patagonia-pitch__adventure-image,
+  .patagonia-pitch__case-study-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .patagonia-pitch__about-text .patagonia-pitch__kicker,
+  .patagonia-pitch__about-text .patagonia-pitch__title,
+  .patagonia-pitch__adventure-text .patagonia-pitch__kicker,
+  .patagonia-pitch__adventure-text .patagonia-pitch__title {
+    text-align: center;
+  }
+
+  .patagonia-pitch__case-study-info {
+    text-align: center;
+  }
+
+  .patagonia-pitch__case-study-logos {
+    justify-content: center;
+  }
+
+  .patagonia-pitch__partnership-asks {
+    flex-direction: column;
+  }
+
+  .patagonia-pitch__format-steps {
+    flex-direction: column;
+  }
+
+  .patagonia-pitch__title {
+    font-size: 2.1rem;
+  }
+
+  .patagonia-pitch__hero-title {
+    font-size: 2.75rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .patagonia-pitch__cta-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .patagonia-pitch__audience-stat {
+    width: 130px;
+    height: 130px;
+  }
+
+  .patagonia-pitch__pillars,
+  .patagonia-pitch__tone-tiles {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 18px;
+      height: 18px;
+      margin-top: -9px;
+
+      &::after {
+        font-size: .9rem;
+      }
+    }
+  }
+}
