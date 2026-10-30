@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
 import App from './App';
+import SponsorshipPitch from './components/SponsorshipPitch/SponsorshipPitch';
+import SurfriderPitch from './components/SurfriderPitch/SurfriderPitch';
 import OuterknownPitch from './components/OuterknownPitch/OuterknownPitch';
+import PatagoniaPitch from './components/PatagoniaPitch/PatagoniaPitch';
+import SunBumPitch from './components/SunBumPitch/SunBumPitch';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +16,11 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/sponsorship/:slug" element={<SponsorshipPitch />} />
+        <Route path="/sponsorship/surfrider-foundation" element={<SurfriderPitch />} />
         <Route path="/sponsorship/outerknown" element={<OuterknownPitch />} />
+        <Route path="/sponsorship/patagonia" element={<PatagoniaPitch />} />
+        <Route path="/sponsorship/sun-bum" element={<SunBumPitch />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
