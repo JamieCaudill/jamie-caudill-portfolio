@@ -8,6 +8,7 @@ import SurfriderPitch from './components/SurfriderPitch/SurfriderPitch';
 import OuterknownPitch from './components/OuterknownPitch/OuterknownPitch';
 import PatagoniaPitch from './components/PatagoniaPitch/PatagoniaPitch';
 import SunBumPitch from './components/SunBumPitch/SunBumPitch';
+import ZealOpticsPitch from './components/ZealOpticsPitch/ZealOpticsPitch';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
         <Route path="/sponsorship/outerknown" element={<OuterknownPitch />} />
         <Route path="/sponsorship/patagonia" element={<PatagoniaPitch />} />
         <Route path="/sponsorship/sun-bum" element={<SunBumPitch />} />
+        <Route path="/sponsorship/zeal-optics" element={<ZealOpticsPitch />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
