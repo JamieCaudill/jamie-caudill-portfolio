@@ -2,6 +2,42 @@
 
 ## 2026-10-29
 
+### Added a direct sponsorship pitch page for Outerknown, compressed carousel images, synced the Contact CTA
+
+New route at `/sponsorship/outerknown`, forked from `SurfriderPitch` with the same
+styling/structure but reframed around the trip itself (van, Brisbane, Australia then
+New Zealand) rather than wilderness conservation, pitching Outerknown's focus on
+quality/sustainability over fast fashion. Adds a short autoplaying, looping history
+video and a Waves & Wifi badge alongside the Surfrider/Deep Sea logos in Past
+Collaborations; CTA links swapped to Email/Instagram/Substack (dropped WhatsApp to
+avoid scraper spam).
+
+`src/index.js:8,19`
+```jsx
+import OuterknownPitch from './components/OuterknownPitch/OuterknownPitch';
+...
+<Route path="/sponsorship/outerknown" element={<OuterknownPitch />} />
+```
+
+`src/components/OuterknownPitch/OuterknownPitch.js:243`
+```jsx
+<video src="/videos/outerknown-ok.mp4" poster="/videos/outerknown-ok-poster.jpg" controls loop autoPlay muted playsInline />
+```
+
+Bug caught after publishing: the pillars/tone-tile carousel images were raw camera
+exports (1080-2000px long edge, 9.2MB combined for 12 files) despite rendering in
+~160-320px tiles, making the pitch pages slow to load. Downsized to max 960px long
+edge at JPEG quality 68 via `sips`, bringing the total to ~1.0MB (roughly 9x smaller)
+with no visible quality loss.
+
+Also replaced the WhatsApp link with Substack in the main site's Contact section
+(`src/components/Contact/Contact.js:40`), matching a swap already made on `main`, to
+keep this branch in sync.
+
+```jsx
+<a className="contact__link" href="https://substack.com/@jamcaudill" target="_blank" rel="noreferrer">Substack</a>
+```
+
 ### Added a direct sponsorship pitch page for Surfrider Foundation
 
 New route at `/sponsorship/surfrider-foundation`, forked from the generic

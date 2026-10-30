@@ -299,8 +299,23 @@ const OuterknownPitch = () => {
         </div>
 
         <p className="outerknown-pitch__kicker">The Ask</p>
+        <p className="outerknown-pitch__partnership-text is-tight">
+          I'm looking for a small number of partners to help bring this documentary
+          series to life.
+        </p>
+        <p className="outerknown-pitch__partnership-text is-tight">
+          In return, I'll create authentic, story-driven content that puts your
+          products in the environments they're designed for — from the saltwater and
+          surf to long days exploring the outdoors.
+        </p>
+        <p className="outerknown-pitch__partnership-text is-tight">
+          Partnerships can include production support, gear for the journey,
+          dedicated short-form content, product integration, and photography or
+          video assets for your own channels.
+        </p>
         <p className="outerknown-pitch__partnership-text">
-          I need sponsors to help fund the trip with gear and/or money.
+          Rather than traditional advertising, I want to build partnerships around
+          products I genuinely use and stories worth telling.
         </p>
 
         <div className="outerknown-pitch__partnership-asks">
