@@ -17,7 +17,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/sponsorship/:slug" element={<SponsorshipPitch />} />
+        <Route path="/sponsorship" element={<SponsorshipPitch />} />
         <Route path="/sponsorship/surfrider-foundation" element={<SurfriderPitch />} />
         <Route path="/sponsorship/outerknown" element={<OuterknownPitch />} />
         <Route path="/sponsorship/patagonia" element={<PatagoniaPitch />} />

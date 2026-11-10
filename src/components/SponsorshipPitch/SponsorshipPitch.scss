@@ -1,16 +1,14 @@
 /* SponsorshipPitch.scss */
-/* Style: Vintage Surf — bold condensed display type + warm retro surf palette */
+/* Styling matched to OuterknownPitch.scss (charcoal/blue palette, Anton display */
+/* type) so the generic /sponsorship page and its per-brand forks (Outerknown, */
+/* Zeal Optics, Patagonia, Sun Bum) read as one consistent template. The Format */
+/* section rules below are pulled in from ZealOpticsPitch.scss along with it. */
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-$sandbar: #FEE0BA;
-$amber: #F3C28A;
-$lagoon: #95C9BC;
-$sunset: #DB9967;
-$driftwood: #A77A5D;
-$coral: #CB603E;
-$ink: #3E2A1E;
-$cream-text: #FDF3E0;
+$blue: #B4CDDD;
+$charcoal: #25272B;
+$white: #FFFFFF;
 
 html {
   scroll-behavior: smooth;
@@ -37,7 +35,7 @@ html {
   font-size: .85rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: $driftwood;
+  color: rgba($charcoal, 0.65);
   text-align: center;
 }
 
@@ -53,26 +51,26 @@ html {
 }
 
 .pitch__adventure,
-.pitch__deliverables,
 .pitch__cta,
-.pitch__tone {
-  background-color: $sandbar;
-  color: $ink;
+.pitch__tone,
+.pitch__format {
+  background-color: $white;
+  color: $charcoal;
 }
 
 .pitch__about,
 .pitch__audience,
 .pitch__numbers,
 .pitch__partnership {
-  background-color: $coral;
-  color: $cream-text;
+  background-color: $charcoal;
+  color: $white;
 }
 
 .pitch__about .pitch__kicker,
 .pitch__audience .pitch__kicker,
 .pitch__numbers .pitch__kicker,
 .pitch__partnership .pitch__kicker {
-  color: rgba(253, 243, 224, 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ---------- Hero ---------- */
@@ -94,7 +92,7 @@ html {
 .pitch__hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba($coral, 0.25) 0%, rgba($coral, 0.75) 100%);
+  background: linear-gradient(180deg, rgba($charcoal, 0.3) 0%, rgba($charcoal, 0.8) 100%);
 }
 
 .pitch__hero-content {
@@ -102,7 +100,7 @@ html {
   z-index: 1;
   max-width: 760px;
   text-align: center;
-  color: $cream-text;
+  color: $white;
   padding: 0 2rem;
 }
 
@@ -114,6 +112,20 @@ html {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   opacity: .85;
+}
+
+.pitch__hero-project {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: .4rem 1.5rem;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  color: $blue;
+  border-top: 1px solid rgba($white, 0.5);
+  border-bottom: 1px solid rgba($white, 0.5);
 }
 
 .pitch__hero-title {
@@ -170,7 +182,7 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.65;
-  color: $cream-text;
+  color: $white;
 }
 
 .pitch__pillars,
@@ -212,12 +224,12 @@ html {
 
 .pitch__pillars .swiper-button-next,
 .pitch__pillars .swiper-button-prev {
-  color: $cream-text;
+  color: $white;
 }
 
 .pitch__tone-tiles .swiper-button-next,
 .pitch__tone-tiles .swiper-button-prev {
-  color: $coral;
+  color: $charcoal;
 }
 
 .pitch__pillar {
@@ -239,8 +251,8 @@ html {
   right: 0;
   bottom: 0;
   padding: .75rem;
-  background: linear-gradient(180deg, rgba(62, 32, 20, 0) 0%, rgba(62, 32, 20, 0.75) 100%);
-  color: $cream-text;
+  background: linear-gradient(180deg, rgba($charcoal, 0) 0%, rgba($charcoal, 0.8) 100%);
+  color: $white;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: .75rem;
@@ -271,7 +283,8 @@ html {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(62, 32, 20, 0.2);
+  border: 1px solid rgba(37, 39, 43, 0.15);
+  box-shadow: 0 6px 16px rgba(37, 39, 43, 0.15);
 }
 
 .pitch__tone-swatch-label {
@@ -280,7 +293,7 @@ html {
   font-size: .7rem;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: $driftwood;
+  color: rgba($charcoal, 0.65);
 }
 
 .pitch__tone-tile {
@@ -288,7 +301,6 @@ html {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 4px;
-  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.2);
 
   img {
     width: 100%;
@@ -304,8 +316,8 @@ html {
   right: 0;
   bottom: 0;
   padding: .75rem;
-  background: linear-gradient(180deg, rgba(62, 32, 20, 0) 0%, rgba(62, 32, 20, 0.75) 100%);
-  color: $cream-text;
+  background: linear-gradient(180deg, rgba($charcoal, 0) 0%, rgba($charcoal, 0.8) 100%);
+  color: $white;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: .75rem;
@@ -328,7 +340,7 @@ html {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 2px dashed rgba(253, 243, 224, 0.5);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,7 +356,7 @@ html {
   text-transform: uppercase;
   font-size: 1.3rem;
   line-height: 1.1;
-  color: $sandbar;
+  color: $blue;
 }
 
 .pitch__audience-stat-label {
@@ -353,7 +365,7 @@ html {
   font-size: .7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(253, 243, 224, 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .pitch__audience-proof {
@@ -362,7 +374,7 @@ html {
   background-color: #fff;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.25);
+  box-shadow: 0 10px 24px rgba(37, 39, 43, 0.25);
 
   img {
     width: 100%;
@@ -370,7 +382,7 @@ html {
   }
 }
 
-/* ---------- The Adventure ---------- */
+/* ---------- The Mission ---------- */
 
 .pitch__adventure-container {
   display: flex;
@@ -395,7 +407,7 @@ html {
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-size: 1.05rem;
-  color: $driftwood;
+  color: rgba($charcoal, 0.65);
 }
 
 .pitch__adventure-description {
@@ -403,40 +415,49 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 1.05rem;
   line-height: 1.65;
-  color: $ink;
+  color: $charcoal;
+
+  a {
+    color: $charcoal;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
+  }
 }
 
 .pitch__adventure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
 
   li {
-    position: relative;
-    margin-bottom: 1rem;
-    padding-left: 1.1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba($charcoal, 0.04);
+    border-top: 3px solid $blue;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    line-height: 1.4;
-    color: $ink;
-
-    &::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: $coral;
-    }
+    line-height: 1.5;
+    color: $charcoal;
   }
 }
 
-.pitch__adventure-poster {
+.pitch__adventure-image {
   flex: 0 0 34%;
-  transform: rotate(3deg);
 
   img {
     width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
     display: block;
-    box-shadow: 0 16px 32px rgba(62, 32, 20, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 16px 32px rgba(37, 39, 43, 0.3);
   }
 }
 
@@ -455,8 +476,8 @@ html {
   flex: 1;
   min-width: 220px;
   max-width: 320px;
-  background-color: $sandbar;
-  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.2);
+  background-color: $white;
+  box-shadow: 0 10px 24px rgba(37, 39, 43, 0.2);
 
   img {
     width: 100%;
@@ -477,7 +498,7 @@ html {
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-size: .9rem;
-  color: $driftwood;
+  color: rgba($charcoal, 0.65);
 }
 
 .pitch__numbers-tile-value {
@@ -486,23 +507,64 @@ html {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: $ink;
+  color: $charcoal;
 }
 
-/* ---------- What's Inside for You ---------- */
+/* ---------- The Format ---------- */
 
-.pitch__deliverables-grid {
+.pitch__format-text {
+  max-width: 700px;
+  margin: 0 0 1.75rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: $charcoal;
+}
+
+.pitch__format-quote {
+  max-width: 600px;
+  margin: 0 0 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid rgba($charcoal, 0.3);
+  text-align: left;
+
+  p {
+    margin: 0 0 .5rem;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: $charcoal;
+  }
+
+  cite {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: .85rem;
+    letter-spacing: 0.04em;
+    color: rgba($charcoal, 0.65);
+
+    em {
+      font-style: italic;
+    }
+  }
+}
+
+.pitch__format-steps {
   display: flex;
   gap: 2rem;
   max-width: 1100px;
   width: 100%;
+  margin-top: 1.25rem;
 }
 
-.pitch__deliverables-card {
+.pitch__format-step {
   flex: 1;
   padding: 2rem;
-  background-color: #fff;
-  border-top: 4px solid $coral;
+  text-align: center;
+  background-color: rgba($charcoal, 0.05);
+  border: 1px solid rgba($charcoal, 0.15);
 
   h3 {
     margin: 0 0 .75rem;
@@ -510,19 +572,20 @@ html {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    color: $charcoal;
   }
 
   p {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    font-size: .95rem;
     line-height: 1.5;
-    color: $ink;
+    color: rgba($charcoal, 0.75);
   }
 }
 
-/* ---------- Partnership / The Ask ---------- */
+/* ---------- Track Record / The Ask ---------- */
 
 .pitch__partnership-text {
   max-width: 600px;
@@ -531,25 +594,60 @@ html {
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   line-height: 1.5;
-  color: rgba(253, 243, 224, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+
+  &.is-tight {
+    margin-bottom: 1.25rem;
+  }
 }
 
-.pitch__partnership-partners {
+.pitch__partnership-history {
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+  max-width: 700px;
+  width: 100%;
+
+  li {
+    position: relative;
+    margin-bottom: .85rem;
+    padding-left: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+
+    &::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: $blue;
+    }
+  }
+}
+
+.pitch__case-study {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 2.5rem;
-  margin-bottom: 3.5rem;
-  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 0 3.5rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.pitch__partnership-proof {
-  flex: 0 0 160px;
-  width: 160px;
-  aspect-ratio: 3 / 4;
+.pitch__case-study-image {
+  flex: 0 0 34%;
+  width: 34%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.25);
 
   img {
     width: 100%;
@@ -559,11 +657,61 @@ html {
   }
 }
 
-.pitch__partnership-partners-info {
+.pitch__case-study-info {
+  flex: 1;
+}
+
+.pitch__case-study-label {
+  display: block;
+  margin-bottom: .5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pitch__case-study-title {
+  margin: 0 0 .5rem;
+  font-family: 'Anton', 'Inter', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  color: $white;
+}
+
+.pitch__case-study-stat {
+  margin: 0 0 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pitch__case-study-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  img {
+    height: 32px;
+    width: auto;
+
+    &.is-inverted {
+      filter: invert(1);
+    }
+  }
+}
+
+.pitch__partnership-partners {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .85rem;
+  margin-bottom: 3.5rem;
 }
 
 .pitch__partnership-partners-label {
@@ -572,7 +720,7 @@ html {
   font-size: .8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(253, 243, 224, 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .pitch__partnership-partners-logos {
@@ -581,7 +729,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  background-color: $sandbar;
+  background-color: $white;
   padding: 1.5rem 2.5rem;
   border-radius: 999px;
 
@@ -589,6 +737,10 @@ html {
     height: 40px;
     width: auto;
     opacity: .9;
+  }
+
+  .pitch__partnership-partners-logo--wavesWifi {
+    height: 56px;
   }
 }
 
@@ -603,8 +755,8 @@ html {
 .pitch__partnership-ask {
   flex: 1;
   padding: 2rem;
-  background-color: rgba(253, 243, 224, 0.08);
-  border: 1px solid rgba(253, 243, 224, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
   h3 {
     margin: 0 0 .75rem;
@@ -620,7 +772,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-size: .95rem;
     line-height: 1.5;
-    color: rgba(253, 243, 224, 0.9);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -629,29 +781,14 @@ html {
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-size: 1rem;
-  color: rgba(253, 243, 224, 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ---------- Closing CTA ---------- */
 
 .pitch__cta {
-  position: relative;
   min-height: 60vh;
   justify-content: center;
-}
-
-.pitch__cta-sticker {
-  position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
-  width: 140px;
-  transform: rotate(-6deg);
-  box-shadow: 0 10px 24px rgba(62, 32, 20, 0.25);
-
-  img {
-    width: 100%;
-    display: block;
-  }
 }
 
 .pitch__cta-content {
@@ -663,7 +800,7 @@ html {
   margin: 0 0 2.5rem;
   font-family: 'Inter', sans-serif;
   font-size: 1.15rem;
-  color: $ink;
+  color: $charcoal;
 }
 
 .pitch__cta-links {
@@ -680,7 +817,7 @@ html {
   font-size: 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $ink;
+  color: $charcoal;
   text-decoration: none;
   padding-bottom: .25rem;
   border-bottom: 2px solid transparent;
@@ -688,36 +825,25 @@ html {
 }
 
 .pitch__cta-link:hover {
-  border-color: $coral;
-  color: $coral;
-}
-
-/* ---------- Not found ---------- */
-
-.pitch--not-found {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $sandbar;
-  color: $ink;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.3rem;
+  border-color: $blue;
+  color: $blue;
 }
 
 /* ---------- Responsive ---------- */
 
 @media screen and (max-width: 900px) {
   .pitch__about-container,
-  .pitch__adventure-container {
+  .pitch__adventure-container,
+  .pitch__case-study {
     flex-direction: column;
     gap: 2.5rem;
   }
 
   .pitch__about-photo,
-  .pitch__adventure-poster {
+  .pitch__adventure-image,
+  .pitch__case-study-image {
     flex: 0 0 auto;
+    width: 100%;
     max-width: 300px;
   }
 
@@ -728,8 +854,19 @@ html {
     text-align: center;
   }
 
-  .pitch__deliverables-grid,
+  .pitch__case-study-info {
+    text-align: center;
+  }
+
+  .pitch__case-study-logos {
+    justify-content: center;
+  }
+
   .pitch__partnership-asks {
+    flex-direction: column;
+  }
+
+  .pitch__format-steps {
     flex-direction: column;
   }
 
@@ -739,11 +876,6 @@ html {
 
   .pitch__hero-title {
     font-size: 2.75rem;
-  }
-
-  .pitch__cta-sticker {
-    position: static;
-    margin: 0 auto 2rem;
   }
 }
 
