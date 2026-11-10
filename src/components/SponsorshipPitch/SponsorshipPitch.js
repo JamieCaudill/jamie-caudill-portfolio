@@ -1,19 +1,27 @@
 // SponsorshipPitch.js //
+// Generic, brand-agnostic version of the OuterknownPitch/ZealOpticsPitch/
+// PatagoniaPitch/SunBumPitch family — same structure and styling, no single
+// sponsor named. Lives at /sponsorship; fork it (as those did) once a specific
+// brand's content is ready.
 
 import './SponsorshipPitch.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useParams } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import sponsorshipPitches from '../../data/sponsorship-pitches';
-import portfolioData from '../../data/portfolio-data';
+import pitch from '../../data/sponsorship-pitches';
 import aboutMe from '../../data/about-me';
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Past-collaboration case studies — add entries here once there's real
+// proof-of-work to show (same shape as SurfriderPitch.js: either
+// { cover, metrics, location } or { photos: [...], caption } for an
+// auto-rotating carousel).
+const pastCollabs = [];
 
 const pillars = [
   { label: "Photographer", image: require('../../images/australia-trip/camera-in-hand.jpg') },
@@ -34,27 +42,12 @@ const tones = [
 ]
 
 const palette = [
-  { label: "Sandbar", hex: "#FEE0BA" },
-  { label: "Amber", hex: "#F3C28A" },
+  { label: "Charcoal", hex: "#25272B" },
   { label: "Lagoon", hex: "#95C9BC" },
+  { label: "Sky Blue", hex: "#B4CDDD" },
+  { label: "Sandbar", hex: "#FEE0BA" },
   { label: "Sunset", hex: "#DB9967" },
-  { label: "Driftwood", hex: "#A77A5D" },
   { label: "Coral", hex: "#CB603E" },
-]
-
-const deliverables = [
-  {
-    title: "Product Placement & Reviews",
-    description: "Gear woven naturally into the trip's content — a real field test, not a staged ad.",
-  },
-  {
-    title: "Documentation Content",
-    description: "Behind-the-scenes process and raw footage, cut for every platform.",
-  },
-  {
-    title: "Custom Collaboration",
-    description: "Bigger campaign, more deliverables, or something specific in mind? Let's build it around your goals.",
-  },
 ]
 
 const asks = [
@@ -72,14 +65,12 @@ const asks = [
   },
 ]
 
+// Add entries here once there's real history/connection to a partner to show.
+const history = []
+
 const SponsorshipPitch = () => {
 
-  const { slug } = useParams();
-  const pitch = sponsorshipPitches.find((entry) => entry.slug === slug);
-
   useLayoutEffect(() => {
-    if (!pitch) return;
-
     gsap.fromTo(".pitch__hero-content", {
       opacity: 0,
       y: 20,
@@ -111,22 +102,14 @@ const SponsorshipPitch = () => {
         }
       })
     })
-  }, [pitch])
-
-  if (!pitch) {
-    return (
-      <div className="pitch pitch--not-found">
-        <p>Pitch not found.</p>
-      </div>
-    )
-  }
+  }, [])
 
   return (
     <main className="pitch">
       <div className="pitch__hero" style={{ backgroundImage: `url(${pitch.heroImage})` }}>
         <div className="pitch__hero-overlay" />
         <div className="pitch__hero-content">
-          <p className="pitch__hero-kicker">[BRAND] × Jamie Caudill</p>
+          <p className="pitch__hero-kicker">Open For Sponsorship</p>
           <h1 className="pitch__hero-title">Be There When the Adventure Becomes the Story</h1>
           <p className="pitch__hero-subtitle">
             An authentic {pitch.destination} expedition, {pitch.dates} — bring your brand along for the journey.
@@ -170,7 +153,7 @@ const SponsorshipPitch = () => {
       </div>
 
       <div className="pitch__section pitch__tone">
-        <p className="pitch__kicker">Vintage Surf</p>
+        <p className="pitch__kicker">Brand Palette</p>
         <h2 className="pitch__title">Color Palette &amp; Tone</h2>
 
         <div className="pitch__tone-swatches">
@@ -232,74 +215,150 @@ const SponsorshipPitch = () => {
       <div className="pitch__section pitch__adventure">
         <div className="pitch__adventure-container">
           <div className="pitch__adventure-text">
-            <p className="pitch__kicker">The Adventure</p>
+            <p className="pitch__kicker">The Mission</p>
             <h2 className="pitch__title">{pitch.destination}</h2>
             <p className="pitch__adventure-subtitle">{pitch.dates} — {pitch.storyAngle}</p>
-            <p className="pitch__adventure-description">{pitch.story}</p>
+            {pitch.story.map((paragraph, index) => (
+              <p className="pitch__adventure-description" key={index}>{paragraph}</p>
+            ))}
             <ul className="pitch__adventure-list">
               {pitch.contentFormats.map((format) => (
                 <li key={format}>{format}</li>
               ))}
             </ul>
           </div>
-          <div className="pitch__animate pitch__adventure-poster">
-            <img src={require('../../images/australia-trip/vintage-surf-poster-coral.png')} alt="Jamie's Vintage Surf Road Trip poster" />
+          <div className="pitch__animate pitch__adventure-image">
+            <img src={require('../../images/IMG_9539.JPG')} alt="Surfers in the lineup" />
           </div>
         </div>
       </div>
 
-      <div className="pitch__section pitch__numbers">
-        <p className="pitch__kicker">Proof of Work</p>
-        <h2 className="pitch__title">Content in Numbers</h2>
+      <div className="pitch__section pitch__format">
+        <p className="pitch__kicker">The Format</p>
+        <h2 className="pitch__title">The Throughline</h2>
+        <p className="pitch__format-text">
+          Every stop on this trip starts with the activity — a surf session, a
+          climb, a day in the snow — and follows wherever it leads: time in
+          nature, a mindfulness practice, the physical challenge of pushing your
+          body, or a closer look at how the people living there relate to wild
+          places.
+        </p>
+        <p className="pitch__format-text">
+          I want to tell stories that connect outdoor adventure — surfing,
+          climbing, skiing — to nature, mindfulness, health and fitness, and
+          sustainability.
+        </p>
+        <p className="pitch__format-text">
+          These aren't staged outdoor ads — they're real days spent chasing
+          swell, elevation, and quiet, and everything that comes with slowing
+          down enough to actually be in it.
+        </p>
 
-        <div className="pitch__numbers-grid">
-          {portfolioData.map((item) => (
-            <div className="pitch__animate pitch__numbers-tile" key={item.id}>
-              <img src={item.cover} alt={item.title} />
-              <div className="pitch__numbers-tile-info">
-                <span className="pitch__numbers-tile-title">{item.title}</span>
-                <span className="pitch__numbers-tile-value">{item.metrics[0].value} {item.metrics[0].label}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+        <blockquote className="pitch__animate pitch__format-quote">
+          <p>"In every walk with nature one receives far more than he seeks."</p>
+          <cite>— John Muir</cite>
+        </blockquote>
 
-      <div className="pitch__section pitch__deliverables">
-        <p className="pitch__kicker">The Collaboration</p>
-        <h2 className="pitch__title">What's Inside for You</h2>
-
-        <div className="pitch__deliverables-grid">
-          {deliverables.map((item) => (
-            <div className="pitch__animate pitch__deliverables-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          ))}
+        <div className="pitch__format-steps">
+          <div className="pitch__animate pitch__format-step">
+            <h3>Get Outside</h3>
+            <p>Surf, climb, hike, or ski — the activity every stop starts with.</p>
+          </div>
+          <div className="pitch__animate pitch__format-step">
+            <h3>Slow Down</h3>
+            <p>Mindfulness, recovery, and time to actually notice the place you're in.</p>
+          </div>
+          <div className="pitch__animate pitch__format-step">
+            <h3>Film</h3>
+            <p>Document the people, the place, and the process — not just the highlight reel.</p>
+          </div>
         </div>
       </div>
 
       <div className="pitch__section pitch__partnership">
-        <p className="pitch__kicker">Partnership</p>
-        <h2 className="pitch__title">Let's Build Something Real</h2>
+        <p className="pitch__kicker">Track Record</p>
+        <h2 className="pitch__title">A Track Record Worth Building On</h2>
         <p className="pitch__partnership-text">
-          I partner with outdoor gear brands that care about sustainability, durability, and usability —
-          creating authentic content from the field, not a studio.
+          I've already shown what honest, in-the-field storytelling can do with
+          outdoor and conservation-minded partners, and I'm ready to bring that
+          same approach to the next one.
         </p>
 
-        <div className="pitch__animate pitch__partnership-partners">
-          <div className="pitch__partnership-proof">
-            <img src={require('../../images/surfrider-portrait.jpg')} alt="Jamie Caudill wearing a Surfrider Foundation shirt" />
-          </div>
-          <div className="pitch__partnership-partners-info">
-            <span className="pitch__partnership-partners-label">Past &amp; Current Collaborations</span>
-            <div className="pitch__partnership-partners-logos">
-              <img src={require('../../images/Outerknown-Logos-01.png')} alt="Outerknown" />
-              <img src={require('../../images/SF-Horizontal-Logo_RGB_Black_crop_small.webp')} alt="Surfrider Foundation" />
-              <img src={require('../../images/DSCC_20_logo_blue_SocMedia_website_circle-1.svg').default} alt="Deep Sea Conserve" />
+        {history.length > 0 && (
+          <ul className="pitch__animate pitch__partnership-history">
+            {history.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+
+        {pastCollabs.map((collab) => (
+          <div className="pitch__animate pitch__case-study" key={collab.title}>
+            {collab.photos ? (
+              <Swiper
+                className="pitch__case-study-image pitch__case-study-swiper"
+                modules={[Autoplay]}
+                loop={true}
+                autoplay={{ delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true }}
+              >
+                {collab.photos.map((photo, index) => (
+                  <SwiperSlide key={index}>
+                    <img src={photo} alt={collab.title} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            ) : (
+              <img className="pitch__case-study-image" src={collab.cover} alt={collab.title} />
+            )}
+            <div className="pitch__case-study-info">
+              <span className="pitch__case-study-label">Past Collaboration</span>
+              <h3 className="pitch__case-study-title">{collab.title}</h3>
+              <p className="pitch__case-study-stat">
+                {collab.caption || `${collab.metrics[0].value} ${collab.metrics[0].label} · ${collab.location}`}
+              </p>
+              <div className="pitch__case-study-logos">
+                {collab.logos?.map((logo) => (
+                  <img
+                    key={logo.alt}
+                    className={logo.invert ? "is-inverted" : ""}
+                    src={logo.src}
+                    alt={logo.alt}
+                  />
+                ))}
+              </div>
             </div>
           </div>
+        ))}
+
+        <div className="pitch__animate pitch__partnership-partners">
+          <span className="pitch__partnership-partners-label">Past &amp; Current Collaborations</span>
+          <div className="pitch__partnership-partners-logos">
+            <img className="pitch__partnership-partners-logo--wavesWifi" src={require('../../images/Waves-Wifi-Logo-Final.svg').default} alt="Waves & Wifi" />
+            <img src={require('../../images/Outerknown-Logos-01.png')} alt="Outerknown" />
+            <img src={require('../../images/SF-Horizontal-Logo_RGB_Black_crop_small.webp')} alt="Surfrider Foundation" />
+            <img src={require('../../images/DSCC_20_logo_blue_SocMedia_website_circle-1.svg').default} alt="Deep Sea Conserve" />
+          </div>
         </div>
+
+        <p className="pitch__kicker">The Ask</p>
+        <p className="pitch__partnership-text is-tight">
+          I'm looking for a small number of partners to help bring this documentary
+          series to life.
+        </p>
+        <p className="pitch__partnership-text is-tight">
+          In return, I'll create authentic, story-driven content that puts your
+          products in the environments they're designed for — from the saltwater and
+          surf to long days exploring the outdoors.
+        </p>
+        <p className="pitch__partnership-text is-tight">
+          Partnerships can include production support, gear for the journey,
+          dedicated short-form content, product integration, and photography or
+          video assets for your own channels.
+        </p>
+        <p className="pitch__partnership-text">
+          Rather than traditional advertising, I want to build partnerships around
+          products I genuinely use and stories worth telling.
+        </p>
 
         <div className="pitch__partnership-asks">
           {asks.map((item) => (
@@ -309,13 +368,9 @@ const SponsorshipPitch = () => {
             </div>
           ))}
         </div>
-        <p className="pitch__partnership-fallback">Or let's customize something that works for both of us.</p>
       </div>
 
       <div className="pitch__section pitch__cta">
-        <div className="pitch__animate pitch__cta-sticker">
-          <img src={require('../../images/australia-trip/vintage-surf-poster-cream.png')} alt="" />
-        </div>
         <div className="pitch__animate pitch__cta-content">
           <p className="pitch__kicker">Let's Go</p>
           <h2 className="pitch__title">Let's Adventure Together</h2>
@@ -323,7 +378,7 @@ const SponsorshipPitch = () => {
           <div className="pitch__cta-links">
             <a className="pitch__cta-link" href="mailto:j.caudill7177@gmail.com">Email</a>
             <a className="pitch__cta-link" href="https://www.instagram.com/jam.caudill/" target="_blank" rel="noreferrer">Instagram</a>
-            <a className="pitch__cta-link" href="https://wa.me/19709489217" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a className="pitch__cta-link" href="https://substack.com/@jamcaudill" target="_blank" rel="noreferrer">Substack</a>
           </div>
         </div>
       </div>
