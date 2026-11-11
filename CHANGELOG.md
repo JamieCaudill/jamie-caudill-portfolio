@@ -1,5 +1,80 @@
 # Changelog
 
+## 2026-11-10
+
+### Reworked the generic sponsorship pitch into a standalone page at /sponsorship
+
+Previously `SponsorshipPitch` lived at `/sponsorship/:slug`, looked up by slug in an
+array with a single "australia" entry, and still had its original Vintage Surf
+cream/orange styling plus unfilled placeholders (`[BRAND] × Jamie Caudill` in the
+hero, a TODO story paragraph). Simplified the route and the data shape, restyled to
+match the Outerknown/Zeal Optics family, and rewrote the copy to focus on adventure
+storytelling rather than environmental advocacy.
+
+`src/index.js:20`
+```jsx
+<Route path="/sponsorship" element={<SponsorshipPitch />} />
+```
+
+`src/data/sponsorship-pitches.js:1`
+```js
+// Generic, brand-agnostic sponsorship pitch for the Australia road trip —
+// lives at /sponsorship as-is, and doubles as the template to fork when
+// pitching a specific brand (see ZealOpticsPitch, PatagoniaPitch,
+// SunBumPitch, OuterknownPitch, SurfriderPitch for forks).
+const sponsorshipPitch = {
+  destination: "Australia",
+  dates: "December 2026",
+  storyAngle: "A van trip from Brisbane down the coast — surfing, camping, and documenting the people and places worth protecting along the way.",
+  story: [
+    "Fly into Brisbane and work my way down the coast by van, camping and surfing along the way, connecting with the people and places worth protecting, and filming the work it takes to give them a voice. Structured as a documentary series — two to three episodes per country (Australia, New Zealand, and beyond) — tied together into a single throughline by the end.",
+  ],
+  ...
+}
+```
+
+Dropped the brand placeholder and the "[BRAND]" bug in the hero kicker (this page
+doesn't name one sponsor), and dropped the "The Defenders" project badge for the
+same reason.
+
+`src/components/SponsorshipPitch/SponsorshipPitch.js:112`
+```jsx
+<p className="pitch__hero-kicker">Open For Sponsorship</p>
+```
+
+Restyled from the Vintage Surf cream/orange palette to match
+`OuterknownPitch.scss`'s charcoal/blue palette and Anton display type, so the generic
+page and its per-brand forks read as one consistent template.
+
+Also rewrote "The Format" section's copy: removed the "3 to 4 partner
+organizations" volunteer-NGO framing and replaced it with copy centered on
+connecting outdoor adventure to nature, mindfulness, health/fitness, and
+sustainability, and swapped the activism-themed Galadriel quote for a John Muir one
+that fits the new tone.
+
+`src/components/SponsorshipPitch/SponsorshipPitch.js:236-249`
+```jsx
+<div className="pitch__section pitch__format">
+  <p className="pitch__kicker">The Format</p>
+  <h2 className="pitch__title">The Throughline</h2>
+  <p className="pitch__format-text">
+    Every stop on this trip starts with the activity — a surf session, a
+    climb, a day in the snow — and follows wherever it leads: time in
+    nature, a mindfulness practice, the physical challenge of pushing your
+    body, or a closer look at how the people living there relate to wild
+    places.
+  </p>
+  <p className="pitch__format-text">
+    I want to tell stories that connect outdoor adventure — surfing,
+    climbing, skiing — to nature, mindfulness, health and fitness, and
+    sustainability.
+  </p>
+```
+
+Finally, removed the Mission section's "Maroon Belles" family-history paragraph
+(and the now-dead marker/link logic in the component that only existed to
+hyperlink it), leaving the Mission section with just the trip-logistics paragraph.
+
 ## 2026-10-29
 
 ### Added a direct sponsorship pitch page for Outerknown, compressed carousel images, synced the Contact CTA
