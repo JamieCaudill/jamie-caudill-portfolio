@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
 import App from './App';
+import Stays from './components/Stays/Stays';
 import SponsorshipPitch from './components/SponsorshipPitch/SponsorshipPitch';
 import SurfriderPitch from './components/SurfriderPitch/SurfriderPitch';
 import OuterknownPitch from './components/OuterknownPitch/OuterknownPitch';
@@ -17,6 +18,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/stays" element={<Stays />} />
         <Route path="/sponsorship" element={<SponsorshipPitch />} />
         <Route path="/sponsorship/surfrider-foundation" element={<SurfriderPitch />} />
         <Route path="/sponsorship/outerknown" element={<OuterknownPitch />} />

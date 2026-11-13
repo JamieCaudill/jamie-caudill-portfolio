@@ -1,5 +1,54 @@
 # Changelog
 
+## 2026-11-13
+
+### Added a standalone /stays page listing all three package tiers
+
+The Packages section on the homepage was simplified to a single Custom tier on
+2026-10-24, dropping the Story (3–4 nights) and Signature (5+ nights) tiers
+entirely. Rather than re-adding them to the homepage, gave them a dedicated page at
+`/stays` with all three tiers side by side, following the existing
+`react-router-dom` route pattern used by `/sponsorship`.
+
+`src/index.js:21`
+```jsx
+<Route path="/stays" element={<Stays />} />
+```
+
+`src/components/Stays/Stays.js:10-39`
+```js
+const stays = [
+  {
+    id: "1",
+    name: "Story",
+    nights: "3–4",
+    deliverables: [
+      "50 professional photos",
+      "6 clips for marketing & stories",
+      "1 short-form reel (15–30 sec)",
+    ],
+  },
+  {
+    id: "2",
+    name: "Signature",
+    nights: "5+",
+    deliverables: [
+      "50–100 professional photos",
+      "10 professional clips for whitelabel marketing",
+      "1 personalized reel documenting the full experience",
+    ],
+    featured: true,
+  },
+  {
+    id: "3",
+    name: "Custom",
+    nights: "Flexible",
+    custom: true,
+    description: "Bigger stay, more content, or something specific in mind? Let's build a package around your space and goals.",
+  },
+];
+```
+
 ## 2026-11-10
 
 ### Reworked the generic sponsorship pitch into a standalone page at /sponsorship
