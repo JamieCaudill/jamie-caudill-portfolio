@@ -13,7 +13,7 @@ const stays = [
     name: "Story",
     nights: "3–4",
     deliverables: [
-      "50 professional photos",
+      "30 professional photos",
       "6 clips for marketing & stories",
       "1 short-form reel (15–30 sec)",
     ],
